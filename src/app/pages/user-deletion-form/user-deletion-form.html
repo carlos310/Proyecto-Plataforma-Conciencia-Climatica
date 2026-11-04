@@ -1,0 +1,17 @@
+<main>
+    <button onclick="window.location.href='/user-deletion-form'" class="regresar-inicio">💧</button>
+    <section class="form">
+        <div>
+            <label for="id">ID del usuario</label>
+            <input class="id" type="number" name="id" [(ngModel)]="id" placeholder="Ingrese el ID del usuario a borrar">
+        </div>
+        <button class="buscar" (click)="buscar()">Buscar</button>
+        @if (mensaje) {
+        <p class="mensaje">{{ mensaje }}</p>
+        }
+    </section>
+    <app-users-main-form [registro]="registro" [soloLectura]="true"></app-users-main-form>
+    @if (registro) {
+    <button class="guardar" (click)="borrar()">Borrar</button>
+    }
+</main>

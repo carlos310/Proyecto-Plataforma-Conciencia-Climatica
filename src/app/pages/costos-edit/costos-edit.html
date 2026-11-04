@@ -1,0 +1,18 @@
+<main>
+    <button onclick="window.location.href='/costos-edit'" class="regresar-inicio">💧</button>
+    <section class="form">
+        <div>
+            <label for="id">ID del costo</label>
+            <input class="id" type="number" name="id" [(ngModel)]="id" placeholder="Ingrese el ID del costo a editar">
+        </div>
+        <div>
+            <label for="fecha">Fecha del costo</label>
+            <input class="fecha" type="date" name="fecha" [(ngModel)]="fecha" placeholder="Ingrese el fecha del costo a editar">
+        </div>
+        <button class="buscar" (click)="buscar()">Buscar</button>
+        @if (mensaje) {
+        <p class="mensaje">{{ mensaje }}</p>
+        }
+    </section>
+    <app-costos-form [registro]="registro" (guardar)="guardar($event)"></app-costos-form>
+</main>

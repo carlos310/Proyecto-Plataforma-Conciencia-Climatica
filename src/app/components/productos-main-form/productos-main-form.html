@@ -1,0 +1,38 @@
+<form class="form" (ngSubmit)="emitirGuardar()">
+    <fieldset [disabled]="soloLectura" style="border:0;margin:0;padding:0;min-width:0">
+    <section class="inputs">
+    <div>
+        <label for="nombre">Nombre</label>
+        <input  id="nombre" name="nombre" [(ngModel)]="model.nombre" type="text" placeholder="Ingrese el Nombre del producto">
+    </div>
+    <div>
+        <label for="descripcion">Descripcion</label>
+        <input  id="descripcion" name="descripcion" [(ngModel)]="model.descripcion" type="text" placeholder="Ingrese la descripcion">
+    </div>
+    <div>
+        <label for="precioVenta">Precio de venta</label>
+        <input  id="precioVenta" name="precioVenta" [(ngModel)]="model.precioVenta" type="number" placeholder="Ingrese el precio de venta">
+    </div>
+    <div>
+        <label for="precioCompra">Precio de compra</label>
+        <input  id="precioCompra" name="precioCompra" [(ngModel)]="model.precioCompra" type="number" placeholder="Ingrese el precio de Compra">
+    </div>
+    <div>
+        <label for="stock">Stock</label>
+        <input  id="stock" name="stock" [(ngModel)]="model.stock" type="number" placeholder="Ingrese el Stock">
+    </div>
+    <div>
+        <label for="categoria">Categoria</label>
+        <input  id="categoria" name="categoria" [(ngModel)]="model.categoria" type="text" placeholder="Ingrese la Categoria">
+    </div>
+    <div>
+        <label for="providerId">ID proveedor</label>
+        <input  id="providerId" name="providerId" [(ngModel)]="model.providerId" type="number" placeholder="Ingrese el ID del proveedor">
+    </div>
+    </section>
+    </fieldset>
+    @if (!soloLectura) {
+    <button class="guardar" >Guardar</button>
+    }
+
+</form>

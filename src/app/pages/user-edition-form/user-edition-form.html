@@ -1,0 +1,15 @@
+<main>
+    <button onclick="window.location.href='/user-edition-form'" class="regresar-inicio">💧</button>
+    <section class="form">
+        <div class>
+            <label for="id">ID del usuario</label>
+            <input class="id" type="number" name="id" [(ngModel)]="id" placeholder="Ingrese el ID del usuario a editar">
+        </div>
+        <button class="buscar" (click)="buscar()">Buscar</button>
+        @if (mensaje) {
+        <p class="mensaje">{{ mensaje }}</p>
+        }
+    </section>
+
+    <app-users-main-form [registro]="registro" (guardar)="guardar($event)"></app-users-main-form>
+</main>

@@ -1,0 +1,18 @@
+<main>
+    <button onclick="window.location.href='/editarProductos'" class="regresar-inicio">💧</button>
+    <section class="form">
+        <div>
+            <label for="id">ID del producto</label>
+            <input class="id" type="number" name="id" [(ngModel)]="id" placeholder="Ingrese el ID del producto a editar">
+        </div>
+        <div>
+            <label for="nombre">Nombre del producto</label>
+            <input class="nombre" type="text" name="nombre" [(ngModel)]="nombre" placeholder="Ingrese el nombre del producto a editar">
+        </div>
+        <button class="buscar" (click)="buscar()">Buscar</button>
+        @if (mensaje) {
+        <p class="mensaje">{{ mensaje }}</p>
+        }
+    </section>
+    <app-porductos-main-form [registro]="registro" (guardar)="guardar($event)"></app-porductos-main-form>
+</main>

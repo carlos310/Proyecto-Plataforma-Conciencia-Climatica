@@ -1,0 +1,305 @@
+main{
+    width: 100%;
+}
+.migas-pan{
+    padding-top:40px;
+    
+}
+.recursos-main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#cce7f7;
+ }  
+
+ .recursos-main h1{
+    font-size: 175%;
+    padding-bottom: 30px;
+    text-align: center;
+ }
+ 
+ .recursos-nav{
+    background-color: white;
+    border-radius: 50px;
+    display:flex;
+    justify-content: space-evenly;
+    width: 90%; 
+    max-height: 50px;
+    height: 70px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    align-items:center;
+    
+ }
+
+ .recursos-nav button{
+    border-radius: 50px;
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
+    width: 20%;
+    height: 40px;
+    overflow:hidden;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 120%;
+    transition:1s ease;
+    border-style: none;
+
+    
+ }
+
+    .recursos-nav button:focus{
+        background-color:#8b8e91;
+        transform: scale(0.8);
+       
+    }
+
+    .recursos-nav-container{
+        display: flex;
+        justify-content: center;
+        background-color:#cce7f7;
+        height: 90px;
+    
+    }
+    
+    .deployable{
+        display: flex;
+        align-items: center;
+        background-color: #cce7f7;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+        max-width: 100%;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+
+    .img-principal img{
+        max-width: 800px;
+        width : auto;
+        height: auto;
+        max-height: 700px;
+        border-radius: 20px;
+
+    }
+
+    .icono-container{
+        display: flex;
+        align-items: center;
+        background-color:#cce7f7;
+        padding: 10px;
+    }
+
+    .icono-container img{
+        width: auto;
+        min-width:40px;
+        height: 50px;
+        margin-bottom: 20px;
+        object-fit:contain;
+    }
+
+    .icono-container span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        font-style: bold;
+        font-size: 150%;
+    }
+    
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 40%;
+        height: auto;
+    }
+   
+    .caracteristicas{
+        background-color: white;
+        padding: 20px 15px 20px 40px;
+        min-height:80px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        height:auto;
+        width:100%;
+    }
+
+    .descripcion{
+        font-size: 120%;
+        padding-bottom: 20px;
+    }
+
+    .caracteristicas h3{
+        color: #000000;
+        font-size: 150%;
+        padding-bottom: 10px;
+    }
+
+    .caracteristicas ul li{
+        list-style-type: none;
+        font-size: 120%;
+    }
+    .caracteristicas ul li::before{
+        content: "✔";
+        color: #1D4ED8;
+        margin-right: 10px;
+    }
+
+    .dato-importante{
+        background-color: rgba(255, 255, 255, 0.5);
+        border-color:rgba(255, 255, 255, 0.644); 
+        padding: 20px 15px 20px 40px;
+        min-height:80px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        height:auto;
+        width:100%;
+    }
+
+    .dato-importante h3{
+        color: #1D4ED8;
+        font-size: 150%;
+        padding-bottom: 10px;
+    }
+    
+    .distribucion{
+        background-color: #f5f5f5;
+        justify-content: center;
+        width: 100%;
+        border-radius: 20px;
+        width: 90%;
+        justify-self: center;
+        
+    }
+
+   .text-distribucion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+   }
+
+    
+
+    .text-distribucion h3{
+        color: #1D4ED8;
+        font-size: 100%;
+        align-items: flex-start;
+    }
+
+    .distribuciones{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 20px;
+    }
+    .ciclo{
+        background-color:#cce7f7 ;
+
+    }
+
+
+    .salada{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #add8e6e1;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    .dulce 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #add8e68a;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    .accesible{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #add8e68a;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 140px;
+        height: 100px;
+    }
+    @media (max-width:768px) {
+        .recursos-main{
+            text-align: center;
+        }
+        .deployable{
+            flex-direction: column;
+            width: 100%;
+            box-shadow: none;
+            align-items: center;
+            .caracteristicas{
+                width: 80%;
+            }
+        }
+        .deployable img{
+            width: 80%;
+        }
+        .text-container{
+            width: 400px;
+            align-items: center;
+            .descripcion{
+                justify-self: center;
+            }
+        }
+        .icono-container{
+            justify-self: center;
+            padding-left: 0;
+            width: 80%;
+        }
+        
+        .img-principal img{
+            display: block;
+            margin: 0;
+        }
+        .dato-importante{
+            width: 400px;
+            align-items: center;
+        }
+        .recursos-nav-container{
+            width: 80% !important;
+        }
+        .distribucion{
+            .descripcion{
+                text-align: center;
+                padding-left: 70px;
+            }
+        }
+        .descripcion{
+            width: 80%;
+        }
+        .distribuciones{
+            display: flex;
+            flex-direction: column;
+            div{
+                width: 80%;
+                height: 100px;
+            }
+        }
+        .ciclo{
+            display: flex;
+            justify-content: center;
+        }
+        .ciclo-pasos{
+            width: 70%;
+        }
+    }

@@ -1,0 +1,30 @@
+<form class="form" (ngSubmit)="emitirGuardar()">
+    <fieldset [disabled]="soloLectura" style="border:0;margin:0;padding:0;min-width:0">
+    <section class="inputs">
+    <div>
+        <label for="total">Total compra</label>
+        <input  id="total" name="total" [(ngModel)]="model.total" type="number" placeholder="Ingrese el valor total de la compra">
+    </div>
+    <div>
+        <label for="cantidad">Cantidad del producto</label>
+        <input  id="cantidad" name="cantidad" [(ngModel)]="model.cantidad" type="number" placeholder="Ingrese la cantidad comprada">
+    </div>
+    <div>
+        <label for="fecha">Fecha</label>
+        <input  id="fecha" name="fecha" [(ngModel)]="model.fecha" type="date" placeholder="Ingrese la fecha de la compra">
+    </div>
+    <div>
+        <label for="proveedor">Proveedor</label>
+        <input  id="proveedor" name="proveedor" [(ngModel)]="model.proveedor" type="text" placeholder="Ingrese el nombre del proveedor">
+    </div>
+    <div>
+        <label for="idUsuario">ID usuario quien lo registra</label>
+        <input  id="idUsuario" name="idUsuario" [(ngModel)]="model.idUsuario" type="number" placeholder="Ingrese el numero de ud del usuario que registra la compra">
+    </div>
+    </section>
+    </fieldset>
+    @if (!soloLectura) {
+    <button class="guardar" >Guardar</button>
+    }
+
+</form>

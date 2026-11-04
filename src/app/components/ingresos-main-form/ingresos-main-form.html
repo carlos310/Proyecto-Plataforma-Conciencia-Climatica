@@ -1,0 +1,30 @@
+<form class="form" (ngSubmit)="emitirGuardar()">
+    <fieldset [disabled]="soloLectura" style="border:0;margin:0;padding:0;min-width:0">
+    <section class="inputs">
+    <div>
+        <label for="descripcion">Descripción</label>
+        <input  id="descripcion" name="descripcion" [(ngModel)]="model.descripcion" type="text" placeholder="Ingrese la descripcion del ingreso">
+    </div>
+    <div>
+        <label for="monto">Monto</label>
+        <input  id="monto" name="monto" [(ngModel)]="model.monto" type="number" placeholder="Ingrese el monto del ingreso">
+    </div>
+    <div>
+        <label for="fecha">Fecha</label>
+        <input  id="fecha" name="fecha" [(ngModel)]="model.fecha" type="date" placeholder="Ingrese la fecha del ingreso">
+    </div>
+    <div>
+        <label for="fuente">Fuente</label>
+        <input  id="fuente" name="fuente" [(ngModel)]="model.fuente" type="text" placeholder="Ingrese el nombre de la fuente">
+    </div>
+    <div>
+        <label for="idUsuario">ID usuario quien lo registra</label>
+        <input  id="idUsuario" name="idUsuario" [(ngModel)]="model.idUsuario" type="number" placeholder="Ingrese el numero de ud del usuario que registra el ingreso">
+    </div>
+    </section>
+    </fieldset>
+    @if (!soloLectura) {
+    <button class="guardar" >Guardar</button>
+    }
+
+</form>

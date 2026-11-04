@@ -1,0 +1,22 @@
+section{
+    background-color:#d5faff;
+    padding: 30px 20px;
+    gap: 20px;
+    min-height: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #b3e5fc;
+  padding: 10px;
+  text-align: center;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}

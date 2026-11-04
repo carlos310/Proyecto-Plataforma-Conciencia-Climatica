@@ -1,0 +1,30 @@
+<section>
+  <button onclick="window.location.href = '/productosDashboard'" class="regresar-inicio">💧</button>
+
+  <div class="tabla-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio de venta</th>
+        <th>Precio de compra</th>
+        <th>Stock</th>
+        <th>Categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (producto of productos; track producto.id) {
+        <tr>
+          <td>{{ producto.name }}</td>
+          <td>{{ producto.description }}</td>
+          <td>{{ producto.sellValue }}</td>
+          <td>{{ producto.buyValue }}</td>
+          <td>{{ producto.stock }}</td>
+          <td>{{ producto.category }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  </div>
+</section>

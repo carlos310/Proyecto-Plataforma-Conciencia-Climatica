@@ -1,0 +1,400 @@
+.catalogo-inicio{
+    display: flex;
+    flex-direction: column;
+    background-color:#cce7f7;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 40vh ;
+    max-height: auto;
+    svg{
+        height: 80px;
+        width: 80px;
+        align-self: center;
+    }
+    h1{
+        font-size: 200%;
+        text-align: center;
+    }
+    p{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 100%;
+        text-align: center;
+    }
+}
+.catalogo-img{
+    background-size: cover;
+    background-color: #cce7f7;
+    display: flex;
+    flex-direction: column;
+}
+.catalogo-img img{
+    display: flex;
+    align-self: center;
+    overflow: auto;
+    width: 40%;
+    height:20%;
+    border-radius: 50px;
+}
+.productos-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color:  #cce7f7;
+    background-size: cover;
+    width: 100%;
+    align-items: center
+    
+}
+.productos{
+    display:flex;
+    justify-content:space-evenly;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding: 30px;
+    height: auto;
+    min-height: 75vh;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #cce7f7;
+    background-size: cover;
+}
+
+.producto{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 25%;
+    overflow: hidden;
+    transition: 0.4s ease;
+    min-height: 500px;
+    height: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.producto:hover{
+    box-shadow: 1px 7px 18px rgba(0,0,0,0.1);
+    transform:scale(1.05) ;
+    
+}
+.producto img{
+    width:100%;
+    border-radius:20px;
+    height: 200px;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+.superior{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    .precio{
+        color:  #214ed3;
+    }
+}
+.impacto-producto{
+    align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 80px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #d5ddf5;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .agua{
+        color:  #214dd3db;
+    }
+}
+.resultados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #cce7f7;
+    min-height: 40vh;
+    max-height: auto;
+    align-items: center;
+    div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        border: none;
+        min-height: 150px;
+        padding-top: 20px;
+        height: auto;
+        width:22%;
+        align-items: center;
+        overflow: hidden;
+        svg{
+            align-self: center;
+            height: 50px;
+            width: 50px;
+        }
+        h2{
+            font-size: 150%;
+        }
+        p{
+            font-size: 100%;
+        }
+
+    }
+    .ahorro{
+        background-color: #d5ddf5;
+        h2{
+            color: #214ed3;
+        }
+    }
+    .eco{
+        background-color: #e0f9b6;
+        h2{
+            color: #25ec39;
+        }
+    }
+    .retorno{
+        background-color: #d5faff;
+        h2{
+            color: #24cce9;
+        }
+    }
+    .facil{
+        background-color: #f5e9d5;
+        h2{
+            color: #eca129;
+        }
+    }
+}
+.por-que-texto{
+    padding: 20px;
+}
+.por-que-container{
+    background-color:#cce7f7 ;
+    align-items: center;
+}
+.por-que{
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(140deg, #1050da , #3384db , #3a99b9 ) ;
+    background-size: cover;
+    min-height: 50vh;
+    height: auto;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    
+}
+.partes{
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+    padding-left: 20px;
+}
+.por-que h3{
+    text-align: center;
+    color: white;
+    font-size: 150%;
+}
+.por-que h4{
+    text-align: center;
+    color: white;
+    font-size: 110%;
+}
+.por-que p{
+    text-align: center;
+    color: white;
+    font-size: 105%;
+}
+.ventas-consejos-impacto {
+    display: flex;
+    width: 100%;
+    min-height: 75vh;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #cce7f7;
+    padding: 10px;
+}
+
+.ventas-consejos-impacto h4 {
+    padding: 10px 0px 10px 30px;
+    font-size: 150%;
+}
+
+.ventas-consejos {
+    min-height: 600px;
+    height: auto;
+    width: 45%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.ventas-impacto {
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    height: auto;
+    width: 45%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    justify-content: space-around;
+}
+.ventas-impacto-text{
+    padding: 0px 30px 0px 30px;
+}
+
+.impactos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ventas-consejos ul {
+    padding: 30px;
+    list-style-image: url("/assets/iconos/listWaterDrop.png");
+    padding-left: 2em;
+}
+
+.ventas-consejos ul li {
+    padding: 10px;
+}
+
+.conservacion {
+    padding: 20px 30px;
+    width: 80%;
+    min-height: 110px;
+    height: auto;
+    border-radius: 20px;
+    min-height: 20px;
+    background-color: #5f7fe142;
+}
+
+.conservacion b {
+    color: #214ed3;
+}
+
+.reduccion {
+    padding: 20px 30px;
+    width: 80%;
+    min-height: 110px;
+    height: auto;
+    border-radius: 20px;
+    background-color:  #e0f9b6;
+}
+
+.reduccion b {
+    color:  #25ec39c6;
+}
+
+.futuro {
+    padding: 20px 30px;
+    width: 80%;
+    min-height: 110px;
+    height: auto;
+    border-radius: 20px;
+    background-color:#d5faff;
+}
+
+.futuro b {
+    color:  #24cce9;
+}
+
+.diferencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(140deg, #1050da, #3384db, #3a99b9);
+}
+.diferencia h1{
+    color: white;
+}
+.diferencia h2{
+    text-align: center;
+    color: white;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+@media (max-width:768px) {
+   .catalogo-img img{
+        display: flex;
+        align-self: center;
+        overflow: auto;
+        width: 80%;
+        height:20%;
+        border-radius: 50px;
+    }
+    .catalogo-img{
+        padding: 20px;
+    } 
+    .resultados{
+        flex-direction: column;
+        gap: 20px;
+        div{
+            width: 80%;
+        }
+    }
+    
+    .por-que-container{
+        padding: 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .partes{
+        flex-direction: column;
+    }
+    .ventas-consejos-impacto{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+    .ventas-consejos{
+        width: 90%;
+        justify-content: center;
+    }
+    .ventas-impacto{
+        width: 90%;
+        justify-content: center;
+    }
+    .productos{
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        gap:20px;
+    }
+    .producto{
+        width:80%;
+    }
+    .diferencia{
+        width: 100%;
+        text-align: center;
+        padding: 20px; 
+        
+    }
+    .buttons{
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .buttons button{
+        width: 100% ;
+        max-width: 350px;
+        min-height: 70px;
+    }
+    
+}

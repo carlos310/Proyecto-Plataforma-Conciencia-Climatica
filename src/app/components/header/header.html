@@ -1,0 +1,47 @@
+<header>
+        <button onclick="window.location.href='/'" class="index-btn">
+            <div class="nombre-empresa" id="nombre-empresa" >
+                <img src="./assets/iconos/water-drop-white.png" alt="white-drop">
+                <h1>Aqua Nova</h1>
+            </div>
+        </button>
+        <menu>
+            <button type="button" class="hamburger" #botonMenu
+                aria-controls="menu-navegacion"
+                [attr.aria-expanded]="menuAbierto"
+                [attr.aria-label]="menuAbierto ? 'Cerrar menú' : 'Abrir menú'"
+                (click)="toggleMenu()">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+            <nav aria-label="Menú principal">
+                <ul class="nav-links" id="menu-navegacion" [class.active]="menuAbierto">
+                    @for (enlace of enlacesPrincipales; track enlace.ruta) {
+                    <li>
+                        <a [routerLink]="enlace.ruta" (click)="cerrarMenu()">
+                            <img [src]="enlace.icono ?? ''" alt="" aria-hidden="true">{{ enlace.etiqueta }}
+                        </a>
+                    </li>
+                    }
+                    @for (seccion of secciones; track seccion.id) {
+                    <li class="grupo" [class.abierto]="seccionAbierta === seccion.id">
+                        <button type="button" class="submenu-toggle"
+                            [attr.aria-expanded]="seccionAbierta === seccion.id"
+                            [attr.aria-controls]="'submenu-' + seccion.id"
+                            (click)="toggleSeccion(seccion.id)">
+                            {{ seccion.titulo }}
+                        </button>
+                        <ul class="submenu" [id]="'submenu-' + seccion.id">
+                            @for (enlace of seccion.enlaces; track enlace.ruta) {
+                            <li>
+                                <a [routerLink]="enlace.ruta" (click)="cerrarMenu()">{{ enlace.etiqueta }}</a>
+                            </li>
+                            }
+                        </ul>
+                    </li>
+                    }
+                </ul>
+            </nav>
+        </menu>
+    </header>

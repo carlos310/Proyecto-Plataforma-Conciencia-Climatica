@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+@import './responsive.css';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* La página ocupa al menos toda la pantalla y el footer se queda al final, sin espacio en blanco debajo */
+html, body{
+    min-height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #cce7f7; /* mismo azul claro de las páginas, para que no se vean franjas blancas */
+}
+app-root{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+app-root > main{
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 0;
+}
+/* Las imágenes nunca se salen de la pantalla */
+img, video{
+    max-width: 100%;
+    height: auto;
+}
+.regresar-inicio{
+    border-radius: 100%;
+    background-color: #1e40af;
+    position: fixed;
+    bottom: 7px;
+    right: 7px;
+    height: 40px;
+    width: 40px;
+    transition: all 0.3s ease;
+}
+.regresar-inicio:hover{
+    background-color: #a34e25;
+    transform: scale(1.15) translateY(-5px);
+}
+.migas-pan{
+    padding-top:20px;
+    align-items: center;
+    padding-left:30px ;
+    background-color:#cce7f7;
+}
+.migas-pan-main{
+    padding-top: 20px;
+    align-items: center;
+    background-color: #cce7f7;
+    padding-left: 30px;
+}
+.btns{
+    border-color: #1d4ed8;
+    border-radius: 13px;
+    background-color: #1d4ed8;
+    color:white;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: 150%;
+    transition:1s ease;
+    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    padding: 10px 20px; 
+
+}
+.btns:hover{
+    background-color:#3c66da;
+    transform: scale(1.2);
+    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+}
+.btns-white-border{
+    border-color: #68696b;
+    border-radius: 13px;
+    background-color: white;
+    border:0.2px solid;
+    color:rgb(10, 10, 10);
+    max-width: 200px;
+    min-width: 50px;
+    width: auto;
+    max-height: 70px;
+    min-height: 50px;
+    height: auto;
+    text-align: center;
+    font-size: 150%;
+    transition:1s ease;
+    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+
+}
+.btns-white-border:hover{
+    background-color:#bdbec0;
+    border-color: #bdbec0;
+    transform: scale(1.1);
+    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+}
+.btns-white{
+    border-color:white;
+    border-radius: 13px;
+    background-color: white;
+    color: #1d4ed8;
+    min-width:250px ;
+    width: auto;
+    min-height: 30px;
+    height: auto;
+    text-align: center;
+    font-size: 150%;
+    transition:1s ease;
+    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+}
+.btns-white:hover{
+    background-color:#bdbec0;
+    border-color: #bdbec0;
+    transform: scale(1.1);
+    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+}
+
+
+

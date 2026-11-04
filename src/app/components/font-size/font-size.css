@@ -1,0 +1,37 @@
+.boton-flotante {
+    position: fixed; /* Esto hace que se quede quieto */
+    bottom: 60px;    /* Distancia desde abajo */
+    right: 7px;     /* Distancia desde la derecha */
+    display: flex;
+    flex-direction: column; /* Los pone uno encima del otro */
+    gap: 15px;       /* Espacio entre botones */
+    z-index: 1000;   /* Asegura que siempre esté por encima de las imágenes y textos */
+}
+.btn-accesibilidad {
+    width: 40px;  
+    height: 40px;
+        
+    border-radius: 50%;
+    background-color: #003399; 
+    color: white;
+        
+    /* Tamaño de letra más pequeño para que quepa bien */
+    font-size: 14px; 
+    font-weight: bold;
+        
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+    /* Sombra suave */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse (como el que pediste para los cuadros) */
+.btn-accesibilidad:hover {
+    transform: scale(1.15) translateY(-5px); /* Se agranda y sube un poquito */
+    background-color: #a34e25; /* El color naranja de tu diseño en Figma */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,35 @@
+<form class="form" (ngSubmit)="emitirGuardar()">
+    <fieldset [disabled]="soloLectura" style="border:0;margin:0;padding:0;min-width:0">
+    <section class="inputs">
+    @if (!hiddenSignInFields) {
+    <div>
+        <label for="nombre">Nombre</label>
+        <input [(ngModel)]="nombre" (ngModelChange)="emitirDatos()" name="nombre" id="nombre" type="text" placeholder="Ingrese el Nombre del producto">
+    </div>
+    }
+    <div>
+        <label for="email">Email</label>
+        <input  [(ngModel)]="email"(ngModelChange)="emitirDatos()" name="email" id="email" type="text" placeholder="Ingrese la email">
+    </div>
+    <div>
+        <label for="contraseña">Contraseña</label>
+        <input  [(ngModel)]="contrasena"(ngModelChange)="emitirDatos()" name="contrasena" id="contraseña" type="text" placeholder="Ingrese la contraseña">
+    </div>
+    @if (!(rolHidden||hiddenSignInFields)){
+    <div class="rol-div">
+        <label for="rol">Rol</label>
+        <select [(ngModel)]="rol" (ngModelChange)="emitirDatos()" name="rol" id="rol">
+            <option value="" disabled>Seleccione un rol</option>
+            @for (opcion of opcionesRol; track opcion.valor) {
+            <option [value]="opcion.valor">{{ opcion.etiqueta }}</option>
+            }
+        </select>
+    </div>
+    }
+    </section>
+    </fieldset>
+   @if (!hiddenSignInFields && !soloLectura) {
+    <button class="guardar" ><p>Guardar</p></button>
+   }
+</form>
+

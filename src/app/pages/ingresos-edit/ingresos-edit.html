@@ -1,0 +1,18 @@
+<main>
+    <button onclick="window.location.href='/ingresos-edit'" class="regresar-inicio">💧</button>
+    <section class="form">
+        <div>
+            <label for="id">ID del ingreso</label>
+            <input class="id" type="number" name="id" [(ngModel)]="id" placeholder="Ingrese el ID del ingreso a editar">
+        </div>
+        <div>
+            <label for="fecha">Fecha del ingreso</label>
+            <input class="fecha" type="date" name="fecha" [(ngModel)]="fecha" placeholder="Ingrese el fecha del ingreso a editar">
+        </div>
+        <button class="buscar" (click)="buscar()">Buscar</button>
+        @if (mensaje) {
+        <p class="mensaje">{{ mensaje }}</p>
+        }
+    </section>
+    <app-ingresos-main-form [registro]="registro" (guardar)="guardar($event)"></app-ingresos-main-form>
+</main>

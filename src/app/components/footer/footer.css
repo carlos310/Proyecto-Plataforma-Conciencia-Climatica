@@ -1,0 +1,86 @@
+footer {
+    background-color: #1e40af;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+p{
+    padding-top: 10px;
+}
+.nav-links {
+  display: flex;           /* coloca los li en fila */
+  justify-content: space-evenly; /* distribuye horizontalmente */             /* espacio entre li */
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-links li {
+  display: flex;           /* asegura que cada li sea flex */
+  align-items: center;    /* centra ícono y texto */
+  list-style-type:none;
+  justify-content: space-evenly;
+  width: 100%;
+  cursor: pointer;
+}
+
+.nav-links li a {
+  display: flex;           /* ícono y texto en línea */
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+ 
+/* El botón azul claro de "Inicio" */
+ 
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.nav-links li a.current{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+ul{
+    list-style: none;
+    display: flex;  
+}
+li{
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    transition: 3s ease;
+    width: 80px;
+    height: 40px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+@media (max-width:768px) {
+  .nav-links {
+    display: none; /* oculto por defecto en móvil */
+    font-size: 12px;
+    color: #25ec39;
+  }
+
+  .nav-links.active {
+    display: flex; /* se muestra al activar */
+    flex-direction: column;
+    background: #1e40af;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}

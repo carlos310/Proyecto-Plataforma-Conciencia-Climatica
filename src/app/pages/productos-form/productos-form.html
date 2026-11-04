@@ -1,0 +1,5 @@
+<button onclick="window.location.href='/ingresarProductos'" class="regresar-inicio">💧</button>
+<app-porductos-main-form (guardar)="crear($event)"></app-porductos-main-form>
+@if (mensaje) {
+<p class="mensaje">{{ mensaje }}</p>
+}

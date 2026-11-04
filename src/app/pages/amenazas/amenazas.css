@@ -1,0 +1,347 @@
+/*AMENAZAS*/
+.migas-pan{
+    padding-top:40px;
+    
+}
+    .amenaza-inicial{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #cce7f7;
+        padding: 40px;
+        
+    }
+.amenaza-img{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 1200px;
+        height: 420px;
+        border-radius: 60px;
+    }   
+}
+.amenaza-inicial h1{
+    font-size: 240%;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #cce7f7;
+}
+.amenaza-inicial h2{
+    font-size: 180%;
+    font-weight: normal;
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: #cce7f7;
+}       
+      
+.principales-amenazas {
+    display: grid;
+    /* Esto obliga a que siempre sean exactamente 3 columnas */
+    background-color: #cce7f7;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /*espacio entre columnas*/
+    padding: 20px;
+}
+.tituloPrincipalesAmenazas{
+    font-size: 240%;
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: #cce7f7;
+    
+}
+meter {
+    width: 100%;
+    height: 10px;
+    
+}
+
+.cuadro {
+    background-color: white;
+    padding: 15px 20px;
+    margin: 15px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Esa sombra suave */
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+.cuadro:hover {
+    transform: scale(1.06); /* Se amplía un poco más que el original */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra que le da profundidad */
+    z-index: 10; /* Lo trae al frente de los demás */
+}
+
+
+.titulo-consecuencias{
+    font-size: 240%;
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: #cce7f7;
+}
+
+.grid-consecuencias {
+    display: grid;
+    /* Esto asegura 3 columnas iguales */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    padding: 20px;
+    background-color: #cce7f7;
+    
+}
+
+.tarjeta-consecuencia {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center; /* Centra todo el contenido */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra muy suave */
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+.tarjeta-consecuencia:hover {
+    transform: scale(1.06); /* Se amplía un poco más que el original */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra que le da profundidad */
+    z-index: 10; /* Lo trae al frente de los demás */
+}
+
+/* Estilo para los números grandes */
+.tarjeta-consecuencia h3 {
+    color: #FF6600; 
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.titulo-impacto {
+    font-size: 240%;
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: #cce7f7;
+}
+.grid-regiones {
+    display: grid;
+    /* Esto asegura 3 columnas iguales */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    padding: 20px;
+    background-color: #cce7f7;
+}
+.tarjeta-region {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center; /* Centra todo el contenido */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra muy suave */
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+.tarjeta-region:hover {
+    transform: scale(1.06); /* Se amplía un poco más que el original */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra que le da profundidad */
+    z-index: 10; /* Lo trae al frente de los demás */
+}
+
+.tarjeta-region h3 {
+    color: #003399; 
+    margin-bottom: 15px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #fff4e5; 
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* Esto es lo que pone las dos columnas lado a lado */
+.contenedor-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el espacio en dos partes iguales */
+    gap: 40px; /* Espacio entre la columna de Salud y Desarrollo */
+    padding: 20px;
+    
+    
+    
+}
+
+.multidimensional {
+    background-color: #faf6f0; 
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #ffe0c2; 
+    margin: 30px auto;
+    max-width: 1100px;
+    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.05);
+}
+.multidimensional h2 {
+    color: #003399; 
+    margin-bottom: 15px;
+    text-align: center;
+}
+.multidimensional p {
+    color: #444;
+    text-align: center;
+}
+.columna ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.columna li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.columna li::before {
+    content: "•";
+    color: #ff6600; 
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+.impacto-ambiental {
+    background-color: #faf6f0; 
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #ffe0c2; 
+    margin: 30px auto;
+    max-width: 1100px;
+    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.05);
+}
+.impacto-ambiental h2 {
+    color: #003399; 
+    text-align: center;
+}
+
+
+.columna h3 {
+    color: #003399; 
+    margin-bottom: 15px;
+}
+.curso {
+    background: linear-gradient(90deg, #0066ff 0%, #0099cc 100%);
+    text-align: center;
+    padding: 60px 40px;
+    border-radius: 20px;
+    border: 1px solid #e0e7ff;
+    margin: 40px 0;
+    color: white;
+    
+}
+
+
+.curso h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.curso p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: white;
+    
+}
+.impacto-potencial {
+    background-color: #dbeafe;
+    border-radius: 24px;
+    padding: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.impacto-potencial h3 {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.impacto-potencial p {
+    color: #1e40af;
+    margin-bottom: 35px;
+}
+
+/* GRID DE 3 COLUMNAS (CIFRAS) */
+.grid-impacto {
+    display: flex;
+    gap: 20px;
+}
+
+/* Tarjetas Blancas de los números */
+.grid-impacto > div {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.grid-impacto h4 {
+    font-size: 2.5rem;
+    color: #2563eb;
+    margin: 0;
+    font-weight: 800;
+}
+
+.grid-impacto p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 10px 0 0 0;
+}
+
+.banner-final {
+    background: linear-gradient(90deg, #0066ff 0%, #0099cc 100%);
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.banner-final h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.banner-final p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+@media (max-width:768px) {
+    .amenaza-img{
+        img{
+            width: 600px;
+            height: 210px;
+            border-radius: 60px;
+        }   
+    }
+    .principales-amenazas{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-consecuencias{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-regiones{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-columnas{
+        display: flex;
+        flex-direction: column;
+    }
+    .columna{
+        width: 80%;
+    }
+}

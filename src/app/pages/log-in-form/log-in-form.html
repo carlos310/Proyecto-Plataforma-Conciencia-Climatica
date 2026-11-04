@@ -1,0 +1,7 @@
+<app-users-main-form (datosListos)="recibirDatos($event)"></app-users-main-form>
+
+<button (click)="handleLogin()">Ingresar</button>
+
+<div *ngIf="mensajeError" class="error">
+  {{ mensajeError }}
+</div>
