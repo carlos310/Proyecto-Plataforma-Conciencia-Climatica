@@ -1,0 +1,7 @@
+{
+  "path-intellisense.mappings": {
+    "@": "${workspaceFolder}/src"
+  },
+  "path-intellisense.showHiddenFiles": true,
+  "path-intellisense.autoTriggerNextSuggestion": true
+}

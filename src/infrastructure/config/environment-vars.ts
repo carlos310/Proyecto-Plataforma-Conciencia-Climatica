@@ -12,7 +12,7 @@ export type ReturnEnvironmentVars={
   // Definimos un esquema con Joi para validar
   const schema = Joi.object({
     PORT: Joi.number().default(4000),
-    DB_PORT:Joi.number().default(3002),
+    DB_PORT:Joi.number().default(5432),
     DB_USER:Joi.string(),
     DB_PASSWORD:Joi.string().allow(""),
     DB_NAME:Joi.string(),
