@@ -3,6 +3,6 @@ export interface Compra{
     total:number;
     quantity:number;
     date:Date;
-    provider:string;
+    provId:number;
     usuId:number;
 }

@@ -19,9 +19,9 @@ export class CompraAdapter implements CompraPort{
             total:Compra.cpr_total,
             quantity:Compra.cpr_cantidad,
             date:Compra.cpr_fecha,
-            provider:Compra.cpr_proveedor,
+            provId:Compra.prov_id,
             usuId:Compra.usu_id,
-            
+
         }
     }
     //se pasan los datos del dominio a modelo entidad
@@ -30,7 +30,7 @@ export class CompraAdapter implements CompraPort{
         compraEntity.cpr_total= Compra.total;
         compraEntity.cpr_cantidad= Compra.quantity;
         compraEntity.cpr_fecha= fechaLocal(Compra.date);
-        compraEntity.cpr_proveedor=Compra.provider;
+        compraEntity.prov_id=Compra.provId;
         compraEntity.usu_id= Compra.usuId;
         return compraEntity;
     }
@@ -55,7 +55,7 @@ export class CompraAdapter implements CompraPort{
                 cpr_total:Compra.total ?? existingCompra.cpr_total,
                 cpr_cantidad:Compra.quantity??existingCompra.cpr_cantidad,
                 cpr_fecha:Compra.date ? fechaLocal(Compra.date) : existingCompra.cpr_fecha,
-                cpr_proveedor:Compra.provider ?? existingCompra.cpr_proveedor,
+                prov_id:Compra.provId ?? existingCompra.prov_id,
                 usu_id: Compra.usuId ?? existingCompra.usu_id,
             });
             await this.CompraRepository.save(existingCompra);

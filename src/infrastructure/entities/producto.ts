@@ -16,7 +16,7 @@ export class Producto{
     prod_stock!:number; 
     @Column({type:"character varying", length:45})
     prod_categoria!:string;
-    @Column({type:"character varying", length:45})
-    fk_prov_id!:string;
+    @Column({type:"int"})
+    prov_id!:number;
      
 }

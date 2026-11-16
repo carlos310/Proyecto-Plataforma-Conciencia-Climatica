@@ -21,7 +21,7 @@ export class ProductoAdapter implements ProductoPort{
             buyValue:Producto.prod_precio_compra,
             stock:Producto.prod_stock,
             category:Producto.prod_categoria,
-            providerId:Number(Producto.fk_prov_id),
+            providerId:Producto.prov_id,
         }
     }
     //se pasan los datos del dominio a modelo entidad
@@ -33,7 +33,7 @@ export class ProductoAdapter implements ProductoPort{
         productoEntity.prod_precio_compra= Producto.buyValue;
         productoEntity.prod_stock= Producto.stock;
         productoEntity.prod_categoria= Producto.category;
-        productoEntity.fk_prov_id=String(Producto.providerId);
+        productoEntity.prov_id=Producto.providerId;
         return productoEntity;
     }
 
@@ -60,7 +60,7 @@ export class ProductoAdapter implements ProductoPort{
                 prod_precio_compra:Producto.buyValue ?? existingProducto.prod_precio_compra,
                 prod_stock: Producto.stock ?? existingProducto.prod_stock,
                 prod_categoria: Producto.category ?? existingProducto.prod_categoria,
-                fk_prov_id:Producto.providerId?? existingProducto.fk_prov_id,
+                prov_id:Producto.providerId?? existingProducto.prov_id,
             });
             await this.ProductoRepository.save(existingProducto);
             return true;
