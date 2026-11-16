@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Aqua Nova</string>
+    <string name="title_activity_main">Aqua Nova</string>
+    <string name="package_name">com.aquanova.app</string>
+    <string name="custom_url_scheme">com.aquanova.app</string>
+</resources>
