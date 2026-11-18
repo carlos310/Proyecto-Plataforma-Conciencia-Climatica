@@ -15,11 +15,20 @@
     </div>
     <div>
         <label for="proveedor">Proveedor</label>
-        <input  id="proveedor" name="proveedor" [(ngModel)]="model.proveedor" type="text" placeholder="Ingrese el nombre del proveedor">
+        @if (proveedores.length) {
+        <select id="proveedor" name="proveedor" [(ngModel)]="model.proveedor" autocomplete="off">
+            <option [ngValue]="null" disabled>Seleccione un proveedor</option>
+            @for (p of proveedores; track p.id) {
+            <option [ngValue]="p.id">{{ p.id }} - {{ p.nombre }}</option>
+            }
+        </select>
+        } @else {
+        <input  id="proveedor" name="proveedor" [(ngModel)]="model.proveedor" type="number" autocomplete="off" placeholder="Ingrese el ID del proveedor">
+        }
     </div>
     <div>
         <label for="idUsuario">ID usuario quien lo registra</label>
-        <input  id="idUsuario" name="idUsuario" [(ngModel)]="model.idUsuario" type="number" placeholder="Ingrese el numero de ud del usuario que registra la compra">
+        <input  id="idUsuario" name="idUsuario" [(ngModel)]="model.idUsuario" type="number" autocomplete="off" placeholder="Ingrese el ID del usuario que registra la compra">
     </div>
     </section>
     </fieldset>

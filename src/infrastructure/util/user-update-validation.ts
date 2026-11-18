@@ -19,33 +19,30 @@ function validateUpdateUserData(data:any):ValidationUpdateUserData{
         .trim()
         .min(3)
         .pattern(/^[a-zA-Z\s]+$/)
-        .required()
+        .optional()
         .messages({
             "string.base": "El nombre debe ser un texto.",
             "string.empty": "El nombre no puede estar vacío.",
             "string.min": "El nombre debe tener al menos 3 caracteres.",
-            "string.pattern.base": "El nombre solo puede contener letras y espacios.",
-            "any.required": "El nombre es obligatorio."
+            "string.pattern.base": "El nombre solo puede contener letras y espacios."
         }),
         email:Joi.string()
         .email({tlds:{allow:false}})
-        .required()
+        .optional()
         .messages({
             "string.base": "El correo debe ser un texto.",
             "string.empty": "El correo no puede estar vacío.",
-            "string.email": "El correo debe tener un formato válido (ejemplo: usuario@dominio.com).",
-            "any.required": "El correo es obligatorio."
+            "string.email": "El correo debe tener un formato válido (ejemplo: usuario@dominio.com)."
         }), //tlds hace referencia a las terminaciones de los correo, lo que se dice ahí es que no valide eso, ejemplo de tlds .edu
         //solo se aceptan los roles que entienden las rutas y el menú; cualquier otro texto se rechaza
         rol:Joi.string()
         .trim()
         .valid("admin","empleado","cliente")
-        .required()
+        .optional()
         .messages({
             "string.base": "El rol debe ser un texto.",
             "string.empty": "El rol no puede estar vacío.",
-            "any.only": "El rol debe ser admin, empleado o cliente.",
-            "any.required": "El rol es obligatorio."
+            "any.only": "El rol debe ser admin, empleado o cliente."
         }),
         password: Joi.string()
         .min(8)
@@ -59,8 +56,7 @@ function validateUpdateUserData(data:any):ValidationUpdateUserData{
             "string.max": "La contraseña no puede superar los 20 caracteres.",
             "string.pattern.base": "La contraseña debe incluir mayúsculas, minúsculas, números y un carácter especial."
         }),
-    }).unknown(false).or("name","email","rol","password"); //no se permiten campos extra u otros fields no conocidos
-    //el or se agregó para que no se limite a exigir todo sino que permita que no sean todos los valores los que se modifiquen
+    }).unknown(false); //no se permiten campos extra u otros fields no conocidos
     const{error, value}=userSchema.validate(data,{abortEarly:false, stripUnknown:true,convert:true});//abortEarly define cuantos errores soporta mientras va validando si fuera true pararía en el primer error, en este caso como es false solo sigue después de obtener el error
     return{error, value};
 }

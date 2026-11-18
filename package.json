@@ -10,7 +10,7 @@
     "test": "ng test",
     "serve:ssr": "node dist/aquanova/server/server.mjs",
     "start:backend": "tsx --tsconfig tsconfig.server.json src/server.ts",
-    "dev:backend": "tsx watch --tsconfig tsconfig.server.json src/server.ts",
+    "dev:backend": "nodemon --exec tsx --tsconfig tsconfig.server.json src/server.ts",
     "dev": "concurrently \"npm run dev:backend\" \"npm run serve:ssr\"",
     "typeorm": "typeorm-ts-node-esm",
     "migration:generate": "npm run typeorm migration:generate -- -d src/data-source.ts",

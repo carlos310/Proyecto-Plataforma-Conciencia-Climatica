@@ -11,14 +11,14 @@ import { crearRegistro } from '../../../../src/infrastructure/adapter/consultasA
 export class ComprasProductosCreate {
   mensaje = '';
 
-  // POST /api/compras/compras
+  // POST /api/compras
   async crear(valores: ComprasFormValores) {
     try {
-      await crearRegistro('compras/compras', {
+      await crearRegistro('compras', {
         total: valores.total,
         quantity: valores.cantidad,
         date: valores.fecha,
-        provider: valores.proveedor,
+        providerId: valores.proveedor,
         usuId: valores.idUsuario,
       });
       this.mensaje = 'Compra creada con éxito';

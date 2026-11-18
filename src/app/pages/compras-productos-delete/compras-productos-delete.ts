@@ -20,8 +20,8 @@ export class ComprasProductosDelete {
   async buscar() {
     try {
       this.registro = this.id
-        ? await obtenerPorId<Compra>('compras/compras', this.id)
-        : ((await obtenerTodos<Compra>('compras/compras')).find(c => fechaISO(c.date) === this.fecha) ?? null);
+        ? await obtenerPorId<Compra>('compras', this.id)
+        : ((await obtenerTodos<Compra>('compras')).find(c => fechaISO(c.date) === this.fecha) ?? null);
       this.mensaje = this.registro ? '' : 'No se encontró ninguna compra con esos datos';
     } catch {
       this.registro = null;
@@ -34,7 +34,7 @@ export class ComprasProductosDelete {
     const id = this.registro?.id;
     if (!id || !confirm('¿Seguro que deseas borrar esta compra?')) return;
     try {
-      await eliminarRegistro('compras/compras', id);
+      await eliminarRegistro('compras', id);
       this.registro = null;
       this.mensaje = 'Compra borrada con éxito';
     } catch (error) {

@@ -90,7 +90,7 @@ export class GastoAdapter implements GastoPort{
     async getGastoAllGasto(): Promise<GastoDomain[]> {
         try {
             const existingGasto= await this.GastoRepository.find();
-            return existingGasto.map(this.toDomain);
+            return existingGasto.map(g => this.toDomain(g));
         } catch (error) {
             console.log("Error finding Gastos", error);
             throw new Error("Error encontrando Gastos");

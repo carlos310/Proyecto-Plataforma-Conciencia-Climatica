@@ -5,7 +5,7 @@ export interface Compra {
   total: number;
   quantity: number;
   date: Date;
-  provider: string;
+  providerId: number;
   usuId: number;
 }
 
@@ -37,12 +37,10 @@ function validateCompraData(data: any): ValidationCompraData {
       'any.required': 'La fecha es obligatoria.',
     }),
 
-    provider: Joi.string().trim().min(3).max(100).required().messages({
-      'string.base': 'El proveedor debe ser un texto.',
-      'string.empty': 'El proveedor no puede estar vacío.',
-      'string.min': 'El proveedor debe tener al menos 3 caracteres.',
-      'string.max': 'El proveedor no puede superar los 100 caracteres.',
-      'any.required': 'El proveedor es obligatorio.',
+    providerId: Joi.number().integer().min(1).required().messages({
+      'number.base': 'El ID de proveedor debe ser un número.',
+      'number.min': 'El ID de proveedor debe ser mayor a 0.',
+      'any.required': 'El ID de proveedor es obligatorio.',
     }),
 
     usuId: Joi.number().integer().min(1).required().messages({

@@ -1,0 +1,6 @@
+{
+  "watch": ["src/server.ts", "src/infrastructure", "src/domain", "src/app", ".env"],
+  "ignore": ["src/app/pages", "src/app/components", "src/app/navigation", "src/**/*.spec.ts", "src/**/*.html", "src/**/*.css"],
+  "ext": "ts,json",
+  "delay": 500
+}

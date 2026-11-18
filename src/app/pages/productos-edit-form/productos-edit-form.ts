@@ -20,8 +20,8 @@ export class ProductosEditForm {
     try {
       // Por ID si se escribió; si no, por nombre (sin distinguir mayúsculas)
       this.registro = this.id
-        ? await obtenerPorId<Producto>('productos/productos', this.id)
-        : ((await obtenerTodos<Producto>('productos/productos')).find(p => p.name.toLowerCase() === this.nombre.trim().toLowerCase()) ?? null);
+        ? await obtenerPorId<Producto>('productos', this.id)
+        : ((await obtenerTodos<Producto>('productos')).find(p => p.name.toLowerCase() === this.nombre.trim().toLowerCase()) ?? null);
       this.mensaje = this.registro ? '' : 'No se encontró ningún producto con esos datos';
     } catch {
       this.registro = null;
@@ -29,11 +29,11 @@ export class ProductosEditForm {
     }
   }
 
-  // PUT /api/productos/Producto/:id con los nombres del dominio que espera el backend
+  // PUT /api/productos/:id
   async guardar(valores: ProductosFormValores) {
     if (!this.registro) return;
     try {
-      await actualizarRegistro('productos/Producto', this.registro.id, {
+      await actualizarRegistro('productos', this.registro.id, {
         name: valores.nombre,
         description: valores.descripcion,
         sellValue: valores.precioVenta,
@@ -42,7 +42,7 @@ export class ProductosEditForm {
         category: valores.categoria,
         providerId: valores.providerId,
       });
-      this.registro = await obtenerPorId<Producto>('productos/productos', this.registro.id);
+      this.registro = await obtenerPorId<Producto>('productos', this.registro.id);
       this.mensaje = 'Producto actualizado con éxito';
     } catch (error) {
       this.mensaje = error instanceof Error ? error.message : 'Error actualizando el producto';
