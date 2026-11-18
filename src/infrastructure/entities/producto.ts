@@ -12,11 +12,11 @@ export class Producto{
     prod_precio_venta!:number;
     @Column({type:"numeric"})
     prod_precio_compra!:number;
-    @Column({type:"character varying", length:40}) 
-    prod_stock!:number; 
+    @Column({type:"character varying", length:45})
+    prod_stock!:string;
     @Column({type:"character varying", length:45})
     prod_categoria!:string;
-    @Column({type:"character varying", length:45})
-    fk_prov_id!:string;
+    @Column({type:"int"})
+    prov_id!:number;
      
 }

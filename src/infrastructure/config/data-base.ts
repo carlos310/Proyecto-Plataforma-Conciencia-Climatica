@@ -6,6 +6,11 @@ import { Ingresos } from "../entities/ingresos.js";
 import { Gastos } from "../entities/gastos.js";
 import { Costos } from "../entities/costos.js";
 import { Compras } from "../entities/compras.js";
+import { Proveedor } from "../entities/proveedor.js";
+import { Cliente } from "../entities/cliente.js";
+import { Empleado } from "../entities/empleado.js";
+import { Venta } from "../entities/venta.js";
+import { Factura } from "../entities/factura.js";
 import envs from "./environment-vars.js";
 dotenv.config();
 export const AppDataSource= new DataSource({
@@ -18,7 +23,7 @@ export const AppDataSource= new DataSource({
     schema:"aqua_nova",
     synchronize: false, //no se usa en prod 
     logging:true,
-    entities:[User, Producto, Ingresos,Gastos,Costos,Compras]
+    entities:[User, Producto, Ingresos,Gastos,Costos,Compras, Proveedor, Cliente, Empleado, Venta, Factura]
 });
 
 //conetar a la DB

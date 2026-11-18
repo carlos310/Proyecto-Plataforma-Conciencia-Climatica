@@ -1,0 +1,48 @@
+﻿<div class="container">
+  <h2>Crear Factura</h2>
+  <form (ngSubmit)="crear()">
+    <div class="form-group">
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" [(ngModel)]="formData.tipo" name="tipo" required>
+        <option value="compra">Compra</option>
+        <option value="venta">Venta</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="referenciaId">Referencia ID:</label>
+      <input type="number" id="referenciaId" [(ngModel)]="formData.referenciaId" name="referenciaId" required />
+    </div>
+    <div class="form-group">
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" [(ngModel)]="formData.fecha" name="fecha" required />
+    </div>
+    <div class="form-group">
+      <label for="total">Total:</label>
+      <input type="number" id="total" [(ngModel)]="formData.total" name="total" step="0.01" required />
+    </div>
+    <div class="form-group">
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" [(ngModel)]="formData.cantidad" name="cantidad" required />
+    </div>
+    <div class="form-group">
+      <label for="estado">Estado:</label>
+      <select id="estado" [(ngModel)]="formData.estado" name="estado" required>
+        <option value="pendiente">Pendiente</option>
+        <option value="pagada">Pagada</option>
+        <option value="cancelada">Cancelada</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="proveedorCliente">Proveedor/Cliente:</label>
+      <input type="text" id="proveedorCliente" [(ngModel)]="formData.proveedorCliente" name="proveedorCliente" required />
+    </div>
+    <div class="form-group">
+      <label for="loteId">ID de Lote (opcional):</label>
+      <input type="number" id="loteId" [(ngModel)]="formData.loteId" name="loteId" />
+    </div>
+    <button type="submit" class="btn-primary">Crear</button>
+  </form>
+  @if (mensaje) {
+  <p class="mensaje">{{ mensaje }}</p>
+  }
+</div>

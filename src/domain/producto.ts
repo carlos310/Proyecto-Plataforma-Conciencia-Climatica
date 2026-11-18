@@ -4,7 +4,7 @@ export interface Producto{
     description:string;
     sellValue:number;
     buyValue:number;
-    stock:number;
+    stock:string;
     category:string;
     providerId:number;
 }

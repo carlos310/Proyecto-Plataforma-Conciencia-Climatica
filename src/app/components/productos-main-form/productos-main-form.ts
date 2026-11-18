@@ -7,7 +7,7 @@ export interface ProductosFormValores {
   descripcion: string;
   precioVenta: number | null;
   precioCompra: number | null;
-  stock: number | null;
+  stock: string | null;
   categoria: string;
   providerId: number | null;
 }

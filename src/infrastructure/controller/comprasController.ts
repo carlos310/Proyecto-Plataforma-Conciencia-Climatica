@@ -13,9 +13,9 @@ export class CompraController {
     try {
       //validar datos de entrada
       //se hce un reestructuración de los datos
-      const { id, total, quantity, date, provider, usuId } = loadCompraData(req.body);
+      const { id, total, quantity, date, providerId, usuId } = loadCompraData(req.body);
       //crear Compra
-      const compra: Compra = { id, total, quantity, date, provider, usuId };
+      const compra: Compra = { id, total, quantity, date, providerId, usuId };
       const compraId = await this.app.createCompras(compra);
       return res.status(201).json({ message: 'Compra creado con exito', compraId });
     } catch (error) {

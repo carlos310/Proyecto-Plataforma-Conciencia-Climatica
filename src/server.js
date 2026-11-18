@@ -1,6 +1,7 @@
 import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse, } from '@angular/ssr/node';
 import 'dotenv/config'; // carga automáticamente las variables de .env
 import express from 'express';
+import cors from 'cors';
 import { dirname, join } from 'node:path';
 import { connectDB } from './infrastructure/config/data-base.js';
 import envs from "./infrastructure/config/environment-vars.js";
@@ -11,6 +12,11 @@ import ingresoRouter from "./infrastructure/routes/IngresosRoutes.js";
 import gastoRouter from "./infrastructure/routes/GastosRoutes.js";
 import costoRouter from "./infrastructure/routes/CostosRoutes.js";
 import compraRouter from "./infrastructure/routes/ComprasRoutes.js";
+import clienteRouter from "./infrastructure/routes/ClienteRoutes.js";
+import empleadoRouter from "./infrastructure/routes/EmpleadoRoutes.js";
+import proveedorRouter from "./infrastructure/routes/ProveedorRoutes.js";
+import ventaRouter from "./infrastructure/routes/VentaRoutes.js";
+import facturaRouter from "./infrastructure/routes/FacturaRoutes.js";
 import { fileURLToPath } from 'node:url';
 // Avoid using import.meta which can cause issues when targeting CommonJS.
 // Use process.cwd() to resolve the browser static folder at runtime.
@@ -21,6 +27,7 @@ const angularApp = new AngularNodeAppEngine();
 /**
  * Middlewares globales
  */
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 /**
@@ -32,6 +39,11 @@ app.use("/api/ingresos", ingresoRouter);
 app.use("/api/gastos", gastoRouter);
 app.use("/api/costos", costoRouter);
 app.use("/api/compras", compraRouter);
+app.use("/api/clientes", clienteRouter);
+app.use("/api/empleados", empleadoRouter);
+app.use("/api/proveedores", proveedorRouter);
+app.use("/api/ventas", ventaRouter);
+app.use("/api/facturas", facturaRouter);
 /**
  * Archivos estáticos de Angular
  */

@@ -90,7 +90,7 @@ export class IngresosAdapter implements IngresoPort{
     async getIngresoAllIngreso(): Promise<IngresosDomain[]> {
         try {
             const existingIngresos= await this.IngresosRepository.find();
-            return existingIngresos.map(this.toDomain);
+            return existingIngresos.map(i => this.toDomain(i));
         } catch (error) {
             console.log("Error finding Ingresoss", error);
             throw new Error("Error encontrando Ingresoss");

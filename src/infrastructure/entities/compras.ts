@@ -5,15 +5,15 @@ export class Compras{
     cpr_id!:number;
 
     @Column({type:"numeric"})
-    cpr_total!:number; 
+    cpr_total!:number;
     @Column({type:"int"})
-    cpr_cantidad!:number; 
+    cpr_cantidad!:number;
     @Column({type:"date"})
     cpr_fecha!:Date;
-    @Column({type:"character varying", length:45})
-    cpr_proveedor!:string;
-    @Column({type:"int"}) 
-    usu_id!:number; 
-    
-    
+    @Column({type:"int"})
+    prov_id!:number;
+    @Column({type:"int"})
+    usu_id!:number;
+
+
 }

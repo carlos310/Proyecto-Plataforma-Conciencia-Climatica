@@ -6,7 +6,7 @@ export type ReturnProductoData = {
   description: string;
   sellValue: number;
   buyValue: number;
-  stock: number;
+  stock: string;
   category: string;
   providerId: number;
 };
@@ -53,9 +53,9 @@ function validateProductoData(data: any): ValidationProductoData {
       'any.required': 'El valor de compra es obligatorio.',
     }),
 
-    stock: Joi.number().integer().min(0).required().messages({
-      'number.base': 'El stock debe ser un número.',
-      'number.min': 'El stock no puede ser negativo.',
+    stock: Joi.string().trim().max(40).required().messages({
+      'string.base': 'El stock debe ser un texto.',
+      'string.max': 'El stock no puede superar los 40 caracteres.',
       'any.required': 'El stock es obligatorio.',
     }),
 

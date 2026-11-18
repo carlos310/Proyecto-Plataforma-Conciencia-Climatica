@@ -13,7 +13,7 @@ const compraApp = new CompraApplication(compraAdapter);
 const compraController = new CompraController(compraApp);
 
 // definición de rutas
-compraRouter.post("/compras", authenticateToken, empleadoOAdmin, async (req: Request, res: Response) => {
+compraRouter.post("/", authenticateToken, empleadoOAdmin, async (req: Request, res: Response) => {
   try {
     await compraController.createCompra(req, res);
   } catch (error) {
@@ -21,7 +21,7 @@ compraRouter.post("/compras", authenticateToken, empleadoOAdmin, async (req: Req
   }
 });
 
-compraRouter.put("/Compra/:id", authenticateToken, soloAdmin, async (req: Request<{ id: string }>, res: Response) => {
+compraRouter.put("/:id", authenticateToken, soloAdmin, async (req: Request<{ id: string }>, res: Response) => {
   try {
     await compraController.updateCompra(req, res);
   } catch (error) {
@@ -29,7 +29,7 @@ compraRouter.put("/Compra/:id", authenticateToken, soloAdmin, async (req: Reques
   }
 });
 
-compraRouter.delete("/compras/:id", authenticateToken, soloAdmin, async (req: Request<{ id: string }>, res: Response) => {
+compraRouter.delete("/:id", authenticateToken, soloAdmin, async (req: Request<{ id: string }>, res: Response) => {
   try {
     await compraController.deleteCompra(req, res);
   } catch (error) {
@@ -37,7 +37,7 @@ compraRouter.delete("/compras/:id", authenticateToken, soloAdmin, async (req: Re
   }
 });
 
-compraRouter.get("/compras/id/:id", authenticateToken, soloAdmin, async (req: Request<{ id: string }>, res: Response) => {
+compraRouter.get("/id/:id", authenticateToken, soloAdmin, async (req: Request<{ id: string }>, res: Response) => {
   try {
     await compraController.getCompraById(req, res);
   } catch (error) {
@@ -45,7 +45,7 @@ compraRouter.get("/compras/id/:id", authenticateToken, soloAdmin, async (req: Re
   }
 });
 
-compraRouter.get("/compras", authenticateToken, soloAdmin, async (req: Request, res: Response) => {
+compraRouter.get("/", authenticateToken, soloAdmin, async (req: Request, res: Response) => {
   try {
     await compraController.getCompraAllCompra(req, res);
   } catch (error) {

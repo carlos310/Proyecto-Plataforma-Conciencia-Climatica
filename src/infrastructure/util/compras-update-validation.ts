@@ -6,7 +6,7 @@ export type ReturnUpdateCompraData = Partial<{
   total: number;
   quantity: number;
   date: Date;
-  provider: string;
+  providerId: number;
   usuId: number;
 }>;
 type ValidationUpdateCompraData = {
@@ -18,41 +18,32 @@ function validateUpdateCompraData(data: any): ValidationUpdateCompraData {
     id: Joi.any().forbidden().messages({
       'any.unknown': 'El campo id no puede ser modificado.',
     }),
-    total: Joi.number().positive().precision(2).required().messages({
+    total: Joi.number().positive().precision(2).optional().messages({
       'number.base': 'El total debe ser un número.',
       'number.positive': 'El total debe ser mayor que 0.',
-      'any.required': 'El total es obligatorio.',
     }),
 
-    quantity: Joi.number().integer().min(1).required().messages({
+    quantity: Joi.number().integer().min(1).optional().messages({
       'number.base': 'La cantidad debe ser un número.',
       'number.min': 'La cantidad debe ser al menos 1.',
-      'any.required': 'La cantidad es obligatoria.',
     }),
 
-    date: Joi.date().iso().required().messages({
+    date: Joi.date().iso().optional().messages({
       'date.base': 'La fecha debe tener un formato válido.',
       'date.format': 'La fecha debe estar en formato ISO (YYYY-MM-DD).',
-      'any.required': 'La fecha es obligatoria.',
     }),
 
-    provider: Joi.string().trim().min(3).max(100).required().messages({
-      'string.base': 'El proveedor debe ser un texto.',
-      'string.empty': 'El proveedor no puede estar vacío.',
-      'string.min': 'El proveedor debe tener al menos 3 caracteres.',
-      'string.max': 'El proveedor no puede superar los 100 caracteres.',
-      'any.required': 'El proveedor es obligatorio.',
+    providerId: Joi.number().integer().min(1).optional().messages({
+      'number.base': 'El ID de proveedor debe ser un número.',
+      'number.min': 'El ID de proveedor debe ser mayor a 0.',
     }),
 
-    usuId: Joi.number().integer().min(1).required().messages({
+    usuId: Joi.number().integer().min(1).optional().messages({
       'number.base': 'El ID de usuario debe ser un número.',
       'number.min': 'El ID de usuario debe ser mayor a 0.',
-      'any.required': 'El ID de usuario es obligatorio.',
     }),
   })
-    .unknown(false)
-    .or('id', 'total', 'quantity', 'date', 'provider', 'usuId', 'usuId'); //no se permiten campos extra u otros fields no conocidos
-  //el or se agregó para que no se limite a exigir todo sino que permita que no sean todos los valores los que se modifiquen
+    .unknown(false); //no se permiten campos extra u otros fields no conocidos
   const { error, value } = CompraSchema.validate(data, {
     abortEarly: false,
     stripUnknown: true,

@@ -93,7 +93,7 @@ export class CostoAdapter implements CostoPort{
     async getCostoAllCosto(): Promise<CostoDomain[]> {
         try {
             const existingCosto= await this.CostoRepository.find();
-            return existingCosto.map(this.toDomain);
+            return existingCosto.map(c => this.toDomain(c));
         } catch (error) {
             console.log("Error finding Costos", error);
             throw new Error("Error encontrando Costos");

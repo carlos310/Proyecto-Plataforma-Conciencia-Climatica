@@ -19,8 +19,8 @@ export class ProductosDeleteForm {
   async buscar() {
     try {
       this.registro = this.id
-        ? await obtenerPorId<Producto>('productos/productos', this.id)
-        : ((await obtenerTodos<Producto>('productos/productos')).find(p => p.name.toLowerCase() === this.nombre.trim().toLowerCase()) ?? null);
+        ? await obtenerPorId<Producto>('productos', this.id)
+        : ((await obtenerTodos<Producto>('productos')).find(p => p.name.toLowerCase() === this.nombre.trim().toLowerCase()) ?? null);
       this.mensaje = this.registro ? '' : 'No se encontró ningún producto con esos datos';
     } catch {
       this.registro = null;
@@ -28,12 +28,12 @@ export class ProductosDeleteForm {
     }
   }
 
-  // DELETE /api/productos/productos/:id
+  // DELETE /api/productos/:id
   async borrar() {
     const id = this.registro?.id;
     if (!id || !confirm('¿Seguro que deseas borrar este producto?')) return;
     try {
-      await eliminarRegistro('productos/productos', id);
+      await eliminarRegistro('productos', id);
       this.registro = null;
       this.mensaje = 'Producto borrado con éxito';
     } catch (error) {

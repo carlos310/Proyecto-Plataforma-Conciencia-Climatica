@@ -11,10 +11,10 @@ import { crearRegistro } from '../../../../src/infrastructure/adapter/consultasA
 export class ProductosForm {
   mensaje = '';
 
-  // POST /api/productos/productos
+  // POST /api/productos
   async crear(valores: ProductosFormValores) {
     try {
-      await crearRegistro('productos/productos', {
+      await crearRegistro('productos', {
         name: valores.nombre,
         description: valores.descripcion,
         sellValue: valores.precioVenta,

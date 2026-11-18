@@ -16,7 +16,7 @@ export class ProductosDashboard implements OnInit {
     try {
     if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:4000/api/productos/productos");
+      const res = await fetch("http://localhost:4000/api/productos");
       if (!res.ok) throw new Error("Error obteniendo productos");
       this.productos = await res.json();
       console.log("Productos cargados:", this.productos);

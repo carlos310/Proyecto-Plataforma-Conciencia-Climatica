@@ -74,6 +74,51 @@ export const SECCIONES_MENU: SeccionMenu[] = [
       { etiqueta: 'Eliminar producto', ruta: '/borrarProductos', roles: ADMIN },
     ],
   },
+  {
+    id: 'proveedores',
+    titulo: 'Proveedores',
+    enlaces: [
+      { etiqueta: 'Crear proveedor', ruta: '/proveedores-create', roles: EMPLEADO },
+      { etiqueta: 'Editar proveedor', ruta: '/proveedores-edit', roles: ADMIN },
+      { etiqueta: 'Eliminar proveedor', ruta: '/proveedores-delete', roles: ADMIN },
+    ],
+  },
+  {
+    id: 'clientes',
+    titulo: 'Clientes',
+    enlaces: [
+      { etiqueta: 'Crear cliente', ruta: '/clientes-create', roles: EMPLEADO },
+      { etiqueta: 'Editar cliente', ruta: '/clientes-edit', roles: ADMIN },
+      { etiqueta: 'Eliminar cliente', ruta: '/clientes-delete', roles: ADMIN },
+    ],
+  },
+  {
+    id: 'empleados',
+    titulo: 'Empleados',
+    enlaces: [
+      { etiqueta: 'Crear empleado', ruta: '/empleados-create', roles: ADMIN },
+      { etiqueta: 'Editar empleado', ruta: '/empleados-edit', roles: ADMIN },
+      { etiqueta: 'Eliminar empleado', ruta: '/empleados-delete', roles: ADMIN },
+    ],
+  },
+  {
+    id: 'ventas',
+    titulo: 'Ventas',
+    enlaces: [
+      { etiqueta: 'Crear venta', ruta: '/ventas-create', roles: EMPLEADO },
+      { etiqueta: 'Editar venta', ruta: '/ventas-edit', roles: ADMIN },
+      { etiqueta: 'Eliminar venta', ruta: '/ventas-delete', roles: ADMIN },
+    ],
+  },
+  {
+    id: 'facturas',
+    titulo: 'Facturas',
+    enlaces: [
+      { etiqueta: 'Crear factura', ruta: '/facturas-create', roles: EMPLEADO },
+      { etiqueta: 'Editar factura', ruta: '/facturas-edit', roles: ADMIN },
+      { etiqueta: 'Eliminar factura', ruta: '/facturas-delete', roles: ADMIN },
+    ],
+  },
 ];
 
 // Devuelve solo los enlaces que el usuario puede usar según sesión y rol.

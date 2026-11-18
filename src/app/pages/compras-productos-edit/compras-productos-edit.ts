@@ -21,8 +21,8 @@ export class ComprasProductosEdit {
     try {
       // Por ID si se escribió; si no, por fecha (primera compra que coincida)
       this.registro = this.id
-        ? await obtenerPorId<Compra>('compras/compras', this.id)
-        : ((await obtenerTodos<Compra>('compras/compras')).find(c => fechaISO(c.date) === this.fecha) ?? null);
+        ? await obtenerPorId<Compra>('compras', this.id)
+        : ((await obtenerTodos<Compra>('compras')).find(c => fechaISO(c.date) === this.fecha) ?? null);
       this.mensaje = this.registro ? '' : 'No se encontró ninguna compra con esos datos';
     } catch {
       this.registro = null;
@@ -30,18 +30,18 @@ export class ComprasProductosEdit {
     }
   }
 
-  // PUT /api/compras/Compra/:id con los nombres del dominio que espera el backend
+  // PUT /api/compras/:id con los nombres del dominio que espera el backend
   async guardar(valores: ComprasFormValores) {
     if (!this.registro) return;
     try {
-      await actualizarRegistro('compras/Compra', this.registro.id, {
+      await actualizarRegistro('compras', this.registro.id, {
         total: valores.total,
         quantity: valores.cantidad,
         date: valores.fecha,
-        provider: valores.proveedor,
+        providerId: valores.proveedor,
         usuId: valores.idUsuario,
       });
-      this.registro = await obtenerPorId<Compra>('compras/compras', this.registro.id);
+      this.registro = await obtenerPorId<Compra>('compras', this.registro.id);
       this.mensaje = 'Compra actualizada con éxito';
     } catch (error) {
       this.mensaje = error instanceof Error ? error.message : 'Error actualizando la compra';
