@@ -29,7 +29,8 @@ app.use((req, res, next) => {
   next();
 });
 app.use(cors({
-  origin: "http://localhost:4200", // tu frontend Angular en dev
+  origin: ["http://localhost:4200", "http://localhost:8082"], // tu frontend Angular en dev
+  
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));

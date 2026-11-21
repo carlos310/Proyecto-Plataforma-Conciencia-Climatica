@@ -1,0 +1,38 @@
+name: CI Plataforma Conciencia Climática
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Compilar aplicación Angular
+        run: npm run build
+
+      - name: Validar configuración Docker Compose
+        run: docker compose config
+
+      - name: Construir imagen del backend
+        run: docker build -f Dockerfile.backend -t conciencia-backend .
+
+      - name: Construir imagen del frontend
+        run: docker build -f Dockerfile.frontend -t conciencia-frontend .

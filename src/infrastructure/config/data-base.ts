@@ -15,8 +15,8 @@ import envs from "./environment-vars.js";
 dotenv.config();
 export const AppDataSource= new DataSource({
     type:"postgres",
-    host:"localhost",
-    port:Number(envs.DB_PORT),
+    host: envs.DB_HOST,
+    port: Number(envs.DB_PORT),
     username:envs.DB_USER,
     password:envs.DB_PASSWORD,
     database:envs.DB_NAME,
