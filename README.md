@@ -6,15 +6,21 @@
 
 ## Estructura de carpetas para el agente
 
-agent/
-├── state.ts          # Definición del StateSchema (memoria y variables de lod productos)
-├── prompts.ts        # Instrucciones del sistema (reglas de negocio, tono del asesor)
-├── tools/            # Herramientas externas que usa el agente
-│   ├── postgres.ts   # Consultas SQL (buscar tanques, kits     hidráulicos, precios, stock)
-│   └── manuals.ts    # Búsqueda RAG en los PDFs técnicos (Pavco, soldaduras PVC/CPVC)
-├── nodes/            # Funciones de cada paso del grafo
-│   ├── advisor.ts    # Nodo principal que llama al LLM con el historial y decide acciones
-│   └── validator.ts  # Nodo opcional para validar compatibilidad técnica o stock antes de cotizar
-├── edges.ts          # Funciones de enrutamiento condicional (deciden hacia qué nodo saltar)
-└── graph.ts          # Une todo: importa nodos, edges y estado, hace .compile() y exporta el grafo
+```text
+proyecto_aquanova/
+├── frontend/                  # Aplicación web en Angular + Capacitor (Móvil)
+├── backend/                   # API principal y lógica de negocio
+│   └── agent/                 # Módulo del Agente Asesor de Compras (LangGraph)
+│       ├── state.ts           # Definición del StateSchema (memoria, historial y estado de cotización)
+│       ├── prompts.ts         # System prompts, tono del asesor y reglas técnicas de compatibilidad
+│       ├── tools/             # Herramientas externas conectadas al agente
+│       │   ├── postgres.ts    # Consultas SQL (catálogo de tanques, kits hidráulicos, precios y stock)
+│       │   └── manuals.ts     # Búsqueda semántica (RAG) en fichas técnicas y manuales PDF
+│       ├── nodes/             # Nodos de procesamiento del grafo
+│       │   ├── advisor.ts     # Nodo principal que invoca al LLM y decide el uso de herramientas
+│       │   └── validator.ts   # Validación de compatibilidad técnica y disponibilidad antes de cotizar
+│       ├── edges.ts           # Enrutamiento condicional entre nodos y ejecución de herramientas
+│       └── graph.ts           # Ensamblaje, compilación (.compile()) y exportación del grafo
+├── database/                  # Scripts SQL de estructura y datos iniciales (PostgreSQL)
+└── docker-compose.yml         # Orquestación de contenedores (Frontend, Backend/Agente, DB)
 
