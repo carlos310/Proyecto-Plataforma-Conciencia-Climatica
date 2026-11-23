@@ -1,6 +1,6 @@
 import { ticketAgente } from "../domain/agente";
 import { ticketPort, modeloPort } from '../domain/agentePort';
-import { graph, type Grafo } from "./AgenteLangGraph/grafo";
+import { graph, type Grafo } from "./Agent/grafo";
 
 export class AgenteApplication{
 
