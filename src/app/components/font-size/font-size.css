@@ -1,3 +1,13 @@
+/* Paleta de colores corporativa Aqua Nova:
+   #000000
+   #002328
+   #004f5b
+   #007b8e
+   #00a7c1
+   #00d3f4
+   #28e2ff
+*/
+
 .boton-flotante {
     position: fixed; /* Esto hace que se quede quieto */
     bottom: 60px;    /* Distancia desde abajo */
@@ -12,7 +22,8 @@
     height: 40px;
         
     border-radius: 50%;
-    background-color: #003399; 
+    background-color: #002328;
+    border: 1px solid #004f5b;
     color: white;
         
     /* Tamaño de letra más pequeño para que quepa bien */
@@ -25,13 +36,14 @@
     justify-content: center;
         
     /* Sombra suave */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 35, 40, 0.25);
     transition: all 0.3s ease;
 }
 
-/* Efecto al pasar el mouse (como el que pediste para los cuadros) */
+/* Efecto al pasar el mouse */
 .btn-accesibilidad:hover {
     transform: scale(1.15) translateY(-5px); /* Se agranda y sube un poquito */
-    background-color: #a34e25; /* El color naranja de tu diseño en Figma */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    background-color: #007b8e;
+    border-color: #00a7c1;
+    box-shadow: 0 8px 15px rgba(0, 79, 91, 0.35);
 }

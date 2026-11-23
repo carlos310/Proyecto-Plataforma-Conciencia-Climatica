@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import './responsive.css';
+
+/* Paleta de colores corporativa Aqua Nova:
+   #000000
+   #002328
+   #004f5b
+   #007b8e
+   #00a7c1
+   #00d3f4
+   #28e2ff
+*/
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +25,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: #cce7f7; /* mismo azul claro de las páginas, para que no se vean franjas blancas */
+    background-color: #f4fafb;
 }
 app-root{
     display: flex;
@@ -33,7 +44,7 @@ img, video{
 }
 .regresar-inicio{
     border-radius: 100%;
-    background-color: #1e40af;
+    background-color: #002328;
     position: fixed;
     bottom: 7px;
     right: 7px;
@@ -42,46 +53,47 @@ img, video{
     transition: all 0.3s ease;
 }
 .regresar-inicio:hover{
-    background-color: #a34e25;
+    background-color: #007b8e;
     transform: scale(1.15) translateY(-5px);
 }
 .migas-pan{
     padding-top:20px;
     align-items: center;
     padding-left:30px ;
-    background-color:#cce7f7;
+    background-color: #f4fafb;
 }
 .migas-pan-main{
     padding-top: 20px;
     align-items: center;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
     padding-left: 30px;
 }
 .btns{
-    border-color: #1d4ed8;
+    border-color: #007b8e;
     border-radius: 13px;
-    background-color: #1d4ed8;
-    color:white;
+    background-color: #007b8e;
+    color: white;
     width: 300px;
     height: 50px;
     text-align: center;
     font-size: 150%;
     transition:1s ease;
-    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 7px 15px rgba(0, 35, 40, 0.12);
     padding: 10px 20px; 
 
 }
 .btns:hover{
-    background-color:#3c66da;
+    background-color: #00a7c1;
+    border-color: #00a7c1;
     transform: scale(1.2);
-    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 7px 15px rgba(0, 79, 91, 0.18);
 }
 .btns-white-border{
-    border-color: #68696b;
+    border-color: #004f5b;
     border-radius: 13px;
     background-color: white;
     border:0.2px solid;
-    color:rgb(10, 10, 10);
+    color: #002328;
     max-width: 200px;
     min-width: 50px;
     width: auto;
@@ -91,21 +103,21 @@ img, video{
     text-align: center;
     font-size: 150%;
     transition:1s ease;
-    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 7px 15px rgba(0, 35, 40, 0.1);
     padding: 10px 20px;
 
 }
 .btns-white-border:hover{
-    background-color:#bdbec0;
-    border-color: #bdbec0;
+    background-color: #f4fafb;
+    border-color: #007b8e;
     transform: scale(1.1);
-    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 7px 15px rgba(0, 79, 91, 0.15);
 }
 .btns-white{
-    border-color:white;
+    border-color: white;
     border-radius: 13px;
     background-color: white;
-    color: #1d4ed8;
+    color: #007b8e;
     min-width:250px ;
     width: auto;
     min-height: 30px;
@@ -113,15 +125,13 @@ img, video{
     text-align: center;
     font-size: 150%;
     transition:1s ease;
-    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 7px 15px rgba(0, 35, 40, 0.1);
     padding: 10px 20px;
 }
 .btns-white:hover{
-    background-color:#bdbec0;
-    border-color: #bdbec0;
+    background-color: #00d3f4;
+    border-color: #00d3f4;
+    color: #002328;
     transform: scale(1.1);
-    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 7px 15px rgba(0, 211, 244, 0.25);
 }
-
-
-

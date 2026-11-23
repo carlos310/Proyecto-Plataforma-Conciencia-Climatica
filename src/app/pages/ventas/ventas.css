@@ -1,7 +1,18 @@
+/* Paleta de colores corporativa Aqua Nova:
+   #000000
+   #002328
+   #004f5b
+   #007b8e
+   #00a7c1
+   #00d3f4
+   #28e2ff
+*/
+
 .catalogo-inicio{
     display: flex;
     flex-direction: column;
-    background-color:#cce7f7;
+    background-color: #f4fafb;
+    color: #002328;
     justify-content: space-evenly;
     align-items: center;
     min-height: 40vh ;
@@ -10,21 +21,24 @@
         height: 80px;
         width: 80px;
         align-self: center;
+        color: #007b8e;
     }
     h1{
         font-size: 200%;
         text-align: center;
+        color: #002328;
     }
     p{
         display: flex;
         flex-wrap: wrap;
         font-size: 100%;
         text-align: center;
+        color: #004f5b;
     }
 }
 .catalogo-img{
     background-size: cover;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
     display: flex;
     flex-direction: column;
 }
@@ -35,12 +49,13 @@
     width: 40%;
     height:20%;
     border-radius: 50px;
+    box-shadow: 0px 8px 24px rgba(0, 35, 40, 0.12);
 }
 .productos-container{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color:  #cce7f7;
+    background-color: #f4fafb;
     background-size: cover;
     width: 100%;
     align-items: center
@@ -56,15 +71,17 @@
     min-height: 75vh;
     max-width: 100%;
     overflow: hidden;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
     background-size: cover;
 }
 
 .producto{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+    background: white;
+    border: 1px solid rgba(0, 123, 142, 0.16);
+    color: #002328;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 35, 40, 0.08);
     max-width: 400px;
     width: 25%;
     overflow: hidden;
@@ -76,7 +93,8 @@
     display: flex;
 }
 .producto:hover{
-    box-shadow: 1px 7px 18px rgba(0,0,0,0.1);
+    border-color: #00a7c1;
+    box-shadow: 1px 8px 22px rgba(0, 79, 91, 0.16);
     transform:scale(1.05) ;
     
 }
@@ -93,7 +111,8 @@
     display: flex;
     justify-content: space-between;
     .precio{
-        color:  #214ed3;
+        color: #007b8e;
+        font-weight: bold;
     }
 }
 .impacto-producto{
@@ -103,19 +122,20 @@
     min-height: 80px;
     width: 100%;
     overflow: hidden;
-    background-color: #d5ddf5;
+    background-color: rgba(0, 123, 142, 0.10);
+    border-left: 3px solid #007b8e;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     .agua{
-        color:  #214dd3db;
+        color: #004f5b;
     }
 }
 .resultados{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
     min-height: 40vh;
     max-height: auto;
     align-items: center;
@@ -124,13 +144,13 @@
         flex-direction: column;
         flex-wrap: wrap;
         border-radius: 20px;
-        border: none;
         min-height: 150px;
         padding-top: 20px;
         height: auto;
         width:22%;
         align-items: center;
         overflow: hidden;
+        color: #002328;
         svg{
             align-self: center;
             height: 50px;
@@ -141,31 +161,36 @@
         }
         p{
             font-size: 100%;
+            color: #004f5b;
         }
 
     }
     .ahorro{
-        background-color: #d5ddf5;
+        background-color: rgba(0, 35, 40, 0.08);
+        border: 1px solid rgba(0, 35, 40, 0.18);
         h2{
-            color: #214ed3;
+            color: #002328;
         }
     }
     .eco{
-        background-color: #e0f9b6;
+        background-color: rgba(0, 79, 91, 0.10);
+        border: 1px solid rgba(0, 79, 91, 0.22);
         h2{
-            color: #25ec39;
+            color: #004f5b;
         }
     }
     .retorno{
-        background-color: #d5faff;
+        background-color: rgba(0, 123, 142, 0.12);
+        border: 1px solid rgba(0, 123, 142, 0.25);
         h2{
-            color: #24cce9;
+            color: #007b8e;
         }
     }
     .facil{
-        background-color: #f5e9d5;
+        background-color: rgba(0, 167, 193, 0.14);
+        border: 1px solid rgba(0, 167, 193, 0.28);
         h2{
-            color: #eca129;
+            color: #007b8e;
         }
     }
 }
@@ -173,13 +198,13 @@
     padding: 20px;
 }
 .por-que-container{
-    background-color:#cce7f7 ;
+    background-color: #f4fafb;
     align-items: center;
 }
 .por-que{
     display: flex;
     flex-direction: column;
-    background:linear-gradient(140deg, #1050da , #3384db , #3a99b9 ) ;
+    background: linear-gradient(140deg, #002328, #004f5b, #007b8e);
     background-size: cover;
     min-height: 50vh;
     height: auto;
@@ -200,12 +225,12 @@
 }
 .por-que h4{
     text-align: center;
-    color: white;
+    color: #28e2ff;
     font-size: 110%;
 }
 .por-que p{
     text-align: center;
-    color: white;
+    color: #e6f7fa;
     font-size: 105%;
 }
 .ventas-consejos-impacto {
@@ -215,13 +240,14 @@
     height: auto;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
     padding: 10px;
 }
 
 .ventas-consejos-impacto h4 {
     padding: 10px 0px 10px 30px;
     font-size: 150%;
+    color: #002328;
 }
 
 .ventas-consejos {
@@ -231,6 +257,8 @@
     padding: 20px;
     border-radius: 20px;
     background-color: white;
+    border: 1px solid rgba(0, 123, 142, 0.16);
+    box-shadow: 0px 5px 15px rgba(0, 35, 40, 0.06);
 }
 
 .ventas-impacto {
@@ -242,10 +270,13 @@
     padding: 20px;
     border-radius: 20px;
     background-color: white;
+    border: 1px solid rgba(0, 123, 142, 0.16);
+    box-shadow: 0px 5px 15px rgba(0, 35, 40, 0.06);
     justify-content: space-around;
 }
 .ventas-impacto-text{
     padding: 0px 30px 0px 30px;
+    color: #004f5b;
 }
 
 .impactos {
@@ -263,6 +294,7 @@
 
 .ventas-consejos ul li {
     padding: 10px;
+    color: #002328;
 }
 
 .conservacion {
@@ -272,11 +304,13 @@
     height: auto;
     border-radius: 20px;
     min-height: 20px;
-    background-color: #5f7fe142;
+    background-color: rgba(0, 79, 91, 0.10);
+    border-left: 4px solid #004f5b;
+    color: #002328;
 }
 
 .conservacion b {
-    color: #214ed3;
+    color: #004f5b;
 }
 
 .reduccion {
@@ -285,11 +319,13 @@
     min-height: 110px;
     height: auto;
     border-radius: 20px;
-    background-color:  #e0f9b6;
+    background-color: rgba(0, 123, 142, 0.12);
+    border-left: 4px solid #007b8e;
+    color: #002328;
 }
 
 .reduccion b {
-    color:  #25ec39c6;
+    color: #007b8e;
 }
 
 .futuro {
@@ -298,11 +334,13 @@
     min-height: 110px;
     height: auto;
     border-radius: 20px;
-    background-color:#d5faff;
+    background-color: rgba(0, 167, 193, 0.14);
+    border-left: 4px solid #00a7c1;
+    color: #002328;
 }
 
 .futuro b {
-    color:  #24cce9;
+    color: #007b8e;
 }
 
 .diferencia{
@@ -312,14 +350,14 @@
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
-    background: linear-gradient(140deg, #1050da, #3384db, #3a99b9);
+    background: linear-gradient(140deg, #002328, #004f5b, #007b8e);
 }
 .diferencia h1{
     color: white;
 }
 .diferencia h2{
     text-align: center;
-    color: white;
+    color: #e6f7fa;
 }
 .buttons{
     display: flex;

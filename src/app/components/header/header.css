@@ -1,5 +1,15 @@
+/* Paleta de colores corporativa Aqua Nova:
+   #000000
+   #002328
+   #004f5b
+   #007b8e
+   #00a7c1
+   #00d3f4
+   #28e2ff
+*/
+
 header {
-  background: #1e40af; /* Azul oscuro */
+  background: #002328; /* Verde jungla oscuro corporativo */
   color: white;
   display: flex;
   align-items: center;
@@ -11,13 +21,14 @@ header {
   z-index: 1000;
   flex-wrap: wrap;
   gap: 10px;
+  border-bottom: 1px solid #004f5b;
 }
 .nombre-empresa{
     display: flex;
     align-items: center;
 }
 .index-btn{
-    background-color:  #1e40af;
+    background-color: #002328;
     box-shadow: none;
     color: white;
     border: none;
@@ -58,13 +69,15 @@ menu {
   transition: 0.5s ease;
 }
  
-/* El botón azul claro de "Inicio" */
+/* Hover y estado activo */
  
 .nav-links li a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: #004f5b;
+    color: #28e2ff;
 }
 .nav-links li a.current{
-    background: rgba(255, 255, 255, 0.1);
+    background: #007b8e;
+    color: white;
 }
 
 /* Grupos desplegables (Ingresos, Gastos, Costos, Compras, Productos) */
@@ -90,6 +103,7 @@ menu {
 .submenu-toggle::after{
   content: '▾';
   font-size: 11px;
+  color: #00d3f4;
   transition: transform 0.2s ease;
 }
 .grupo.abierto .submenu-toggle::after{
@@ -97,7 +111,8 @@ menu {
 }
 .submenu-toggle:hover,
 .grupo.abierto .submenu-toggle{
-  background: rgba(255, 255, 255, 0.1);
+  background: #004f5b;
+  color: #28e2ff;
 }
 /* Oculto por defecto; los desplegables se muestran solo cuando su grupo está abierto */
 .submenu{
@@ -110,9 +125,10 @@ menu {
   top: 100%;
   left: 0;
   min-width: 190px;
-  background: #1e40af;
+  background: #004f5b;
+  border: 1px solid #007b8e;
   border-radius: 8px;
-  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.35);
   z-index: 1001;
 }
 .grupo.abierto .submenu{
@@ -127,14 +143,15 @@ menu {
   border-radius: 5px;
 }
 .submenu a:hover{
-  background: rgba(255, 255, 255, 0.1);
+  background: #007b8e;
+  color: #28e2ff;
 }
 
 /* Foco visible para navegación por teclado */
 .hamburger:focus-visible,
 .nav-links a:focus-visible,
 .submenu-toggle:focus-visible{
-  outline: 2px solid white;
+  outline: 2px solid #00d3f4;
   outline-offset: 2px;
 }
 
@@ -184,7 +201,7 @@ menu {
   .nav-links {
     display: none; /* oculto por defecto en móvil */
     font-size: 12px;
-    color: #25ec39;
+    color: #00d3f4;
   }
   button h1{
     font-size: 30px;
@@ -192,7 +209,8 @@ menu {
   .nav-links.active {
     display: flex; /* se muestra al activar */
     flex-direction: column;
-    background: #1e40af;
+    background: #002328;
+    border: 1px solid #004f5b;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -206,6 +224,7 @@ menu {
     position: static;
     min-width: 0;
     background: none;
+    border: none;
     box-shadow: none;
     padding: 0 0 0 16px;
   }

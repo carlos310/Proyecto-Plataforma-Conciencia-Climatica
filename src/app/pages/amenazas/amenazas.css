@@ -1,3 +1,13 @@
+/* Paleta de colores corporativa Aqua Nova:
+   #000000
+   #002328
+   #004f5b
+   #007b8e
+   #00a7c1
+   #00d3f4
+   #28e2ff
+*/
+
 /*AMENAZAS*/
 .migas-pan{
     padding-top:40px;
@@ -7,7 +17,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #cce7f7;
+        background-color: #f4fafb;
+        color: #002328;
         padding: 40px;
         
     }
@@ -18,26 +29,29 @@
         width: 1200px;
         height: 420px;
         border-radius: 60px;
+        box-shadow: 0 8px 24px rgba(0, 35, 40, 0.14);
     }   
 }
 .amenaza-inicial h1{
     font-size: 240%;
     text-align: center;
     padding-bottom: 20px;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
+    color: #002328;
 }
 .amenaza-inicial h2{
     font-size: 180%;
     font-weight: normal;
     text-align: center;
     padding-bottom: 30px;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
+    color: #004f5b;
 }       
       
 .principales-amenazas {
     display: grid;
     /* Esto obliga a que siempre sean exactamente 3 columnas */
-    background-color: #cce7f7;
+    background-color: #f4fafb;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px; /*espacio entre columnas*/
     padding: 20px;
@@ -46,13 +60,14 @@
     font-size: 240%;
     text-align: center;
     padding-bottom: 30px;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
+    color: #002328;
     
 }
 meter {
     width: 100%;
     height: 10px;
-    
+    accent-color: #007b8e;
 }
 
 .cuadro {
@@ -60,15 +75,17 @@ meter {
     padding: 15px 20px;
     margin: 15px;
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Esa sombra suave */
-    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 35, 40, 0.08); /* Esa sombra suave */
+    border: 1px solid rgba(0, 123, 142, 0.18);
+    color: #002328;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     position: relative;
 }
 .cuadro:hover {
     transform: scale(1.06); /* Se amplía un poco más que el original */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra que le da profundidad */
+    border-color: #00a7c1;
+    box-shadow: 0 10px 20px rgba(0, 79, 91, 0.16); /* Sombra que le da profundidad */
     z-index: 10; /* Lo trae al frente de los demás */
 }
 
@@ -77,7 +94,8 @@ meter {
     font-size: 240%;
     text-align: center;
     padding-bottom: 30px;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
+    color: #002328;
 }
 
 .grid-consecuencias {
@@ -86,7 +104,7 @@ meter {
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px; 
     padding: 20px;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
     
 }
 
@@ -95,21 +113,23 @@ meter {
     padding: 30px;
     border-radius: 15px;
     text-align: center; /* Centra todo el contenido */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra muy suave */
-    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 35, 40, 0.06); /* Sombra muy suave */
+    border: 1px solid rgba(0, 123, 142, 0.15);
+    color: #002328;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     position: relative;
 }
 .tarjeta-consecuencia:hover {
     transform: scale(1.06); /* Se amplía un poco más que el original */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra que le da profundidad */
+    border-color: #00a7c1;
+    box-shadow: 0 10px 20px rgba(0, 79, 91, 0.16); /* Sombra que le da profundidad */
     z-index: 10; /* Lo trae al frente de los demás */
 }
 
 /* Estilo para los números grandes */
 .tarjeta-consecuencia h3 {
-    color: #FF6600; 
+    color: #007b8e; 
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
@@ -117,7 +137,8 @@ meter {
     font-size: 240%;
     text-align: center;
     padding-bottom: 30px;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
+    color: #002328;
 }
 .grid-regiones {
     display: grid;
@@ -125,33 +146,37 @@ meter {
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px; 
     padding: 20px;
-    background-color: #cce7f7;
+    background-color: #f4fafb;
 }
 .tarjeta-region {
     background: white;
     padding: 30px;
     border-radius: 15px;
     text-align: center; /* Centra todo el contenido */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra muy suave */
-    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 35, 40, 0.06); /* Sombra muy suave */
+    border: 1px solid rgba(0, 123, 142, 0.15);
+    color: #002328;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     position: relative;
 }
 .tarjeta-region:hover {
     transform: scale(1.06); /* Se amplía un poco más que el original */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra que le da profundidad */
+    border-color: #00a7c1;
+    box-shadow: 0 10px 20px rgba(0, 79, 91, 0.16); /* Sombra que le da profundidad */
     z-index: 10; /* Lo trae al frente de los demás */
 }
 
 .tarjeta-region h3 {
-    color: #003399; 
+    color: #004f5b; 
     margin-bottom: 15px;
 }
 
 .etiqueta {
     display: inline-block;
-    background-color: #fff4e5; 
+    background-color: rgba(0, 123, 142, 0.12); 
+    color: #004f5b;
+    border: 1px solid rgba(0, 123, 142, 0.25);
     padding: 8px 12px;
     border-radius: 8px;
     font-weight: bold;
@@ -163,27 +188,24 @@ meter {
     grid-template-columns: 1fr 1fr; /* Divide el espacio en dos partes iguales */
     gap: 40px; /* Espacio entre la columna de Salud y Desarrollo */
     padding: 20px;
-    
-    
-    
 }
 
 .multidimensional {
-    background-color: #faf6f0; 
+    background-color: #ffffff; 
     padding: 40px;
     border-radius: 20px;
-    border: 1px solid #ffe0c2; 
+    border: 1px solid rgba(0, 123, 142, 0.20); 
     margin: 30px auto;
     max-width: 1100px;
-    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 24px rgba(0, 35, 40, 0.06);
 }
 .multidimensional h2 {
-    color: #003399; 
+    color: #002328; 
     margin-bottom: 15px;
     text-align: center;
 }
 .multidimensional p {
-    color: #444;
+    color: #004f5b;
     text-align: center;
 }
 .columna ul {
@@ -195,40 +217,41 @@ meter {
     margin-bottom: 15px;
     padding-left: 20px;
     position: relative;
+    color: #002328;
 }
 
 .columna li::before {
     content: "•";
-    color: #ff6600; 
+    color: #00a7c1; 
     font-weight: bold;
     position: absolute;
     left: 0;
 }
 .impacto-ambiental {
-    background-color: #faf6f0; 
+    background-color: #ffffff; 
     padding: 40px;
     border-radius: 20px;
-    border: 1px solid #ffe0c2; 
+    border: 1px solid rgba(0, 123, 142, 0.20); 
     margin: 30px auto;
     max-width: 1100px;
-    box-shadow: 0 40px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 24px rgba(0, 35, 40, 0.06);
 }
 .impacto-ambiental h2 {
-    color: #003399; 
+    color: #002328; 
     text-align: center;
 }
 
 
 .columna h3 {
-    color: #003399; 
+    color: #007b8e; 
     margin-bottom: 15px;
 }
 .curso {
-    background: linear-gradient(90deg, #0066ff 0%, #0099cc 100%);
+    background: linear-gradient(90deg, #002328 0%, #004f5b 55%, #007b8e 100%);
     text-align: center;
     padding: 60px 40px;
     border-radius: 20px;
-    border: 1px solid #e0e7ff;
+    border: 1px solid #007b8e;
     margin: 40px 0;
     color: white;
     
@@ -243,11 +266,12 @@ meter {
 .curso p {
     max-width: 600px;
     margin: 0 auto 30px auto;
-    color: white;
+    color: #e6f7fa;
     
 }
 .impacto-potencial {
-    background-color: #dbeafe;
+    background-color: rgba(0, 123, 142, 0.10);
+    border: 1px solid rgba(0, 123, 142, 0.20);
     border-radius: 24px;
     padding: 50px;
     max-width: 1100px;
@@ -255,13 +279,13 @@ meter {
 }
 
 .impacto-potencial h3 {
-    color: #1e3a8a;
+    color: #002328;
     font-size: 1.5rem;
     margin-top: 0;
 }
 
 .impacto-potencial p {
-    color: #1e40af;
+    color: #004f5b;
     margin-bottom: 35px;
 }
 
@@ -275,27 +299,28 @@ meter {
 .grid-impacto > div {
     flex: 1;
     background-color: #ffffff;
+    border: 1px solid rgba(0, 123, 142, 0.15);
     border-radius: 16px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 35, 40, 0.06);
 }
 
 .grid-impacto h4 {
     font-size: 2.5rem;
-    color: #2563eb;
+    color: #007b8e;
     margin: 0;
     font-weight: 800;
 }
 
 .grid-impacto p {
     font-size: 0.95rem;
-    color: #64748b;
+    color: #004f5b;
     margin: 10px 0 0 0;
 }
 
 .banner-final {
-    background: linear-gradient(90deg, #0066ff 0%, #0099cc 100%);
+    background: linear-gradient(90deg, #002328 0%, #004f5b 55%, #007b8e 100%);
     border-radius: 20px;
     padding: 60px 40px;
     text-align: center;
@@ -315,7 +340,7 @@ meter {
     max-width: 800px;
     margin: 0 auto 30px;
     line-height: 1.6;
-    opacity: 0.9;
+    color: #e6f7fa;
 }
 @media (max-width:768px) {
     .amenaza-img{

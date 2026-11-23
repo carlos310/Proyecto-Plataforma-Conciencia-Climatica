@@ -1,3 +1,13 @@
+/* Paleta de colores corporativa Aqua Nova:
+   #000000
+   #002328
+   #004f5b
+   #007b8e
+   #00a7c1
+   #00d3f4
+   #28e2ff
+*/
+
 main{
     width: 100%;
 }
@@ -10,17 +20,20 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:#cce7f7;
+    background-color: #f4fafb;
+    color: #002328;
  }  
 
  .recursos-main h1{
     font-size: 175%;
     padding-bottom: 30px;
     text-align: center;
+    color: #002328;
  }
  
  .recursos-nav{
     background-color: white;
+    border: 1px solid rgba(0, 123, 142, 0.18);
     border-radius: 50px;
     display:flex;
     justify-content: space-evenly;
@@ -30,13 +43,13 @@ main{
     padding-bottom: 40px;
     padding-top: 40px;
     align-items:center;
-    
+    box-shadow: 0px 4px 12px rgba(0, 35, 40, 0.06);
  }
 
  .recursos-nav button{
     border-radius: 50px;
     background-color: #ffffff;
-    color:rgb(0, 0, 0);
+    color: #002328;
     width: 20%;
     height: 40px;
     overflow:hidden;
@@ -45,20 +58,25 @@ main{
     font-size: 120%;
     transition:1s ease;
     border-style: none;
+    cursor: pointer;
+ }
 
-    
+ .recursos-nav button:hover{
+    background-color: rgba(0, 123, 142, 0.10);
+    color: #007b8e;
  }
 
     .recursos-nav button:focus{
-        background-color:#8b8e91;
-        transform: scale(0.8);
+        background-color: #007b8e;
+        color: white;
+        transform: scale(0.95);
        
     }
 
     .recursos-nav-container{
         display: flex;
         justify-content: center;
-        background-color:#cce7f7;
+        background-color: #f4fafb;
         height: 90px;
     
     }
@@ -66,10 +84,10 @@ main{
     .deployable{
         display: flex;
         align-items: center;
-        background-color: #cce7f7;
+        background-color: #f4fafb;
         padding: 40px;
         border-radius: 10px;
-        box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+        box-shadow: 0px 5px 15px rgba(0, 35, 40, 0.08);
         max-width: 100%;
         gap: 20px;
         justify-content: space-evenly;
@@ -81,13 +99,13 @@ main{
         height: auto;
         max-height: 700px;
         border-radius: 20px;
-
+        box-shadow: 0px 6px 18px rgba(0, 35, 40, 0.12);
     }
 
     .icono-container{
         display: flex;
         align-items: center;
-        background-color:#cce7f7;
+        background-color: #f4fafb;
         padding: 10px;
     }
 
@@ -107,6 +125,7 @@ main{
         padding-bottom: 30px;
         font-style: bold;
         font-size: 150%;
+        color: #002328;
     }
     
     .text-container{
@@ -119,6 +138,7 @@ main{
    
     .caracteristicas{
         background-color: white;
+        border: 1px solid rgba(0, 123, 142, 0.15);
         padding: 20px 15px 20px 40px;
         min-height:80px;
         border-radius: 10px;
@@ -131,10 +151,11 @@ main{
     .descripcion{
         font-size: 120%;
         padding-bottom: 20px;
+        color: #004f5b;
     }
 
     .caracteristicas h3{
-        color: #000000;
+        color: #002328;
         font-size: 150%;
         padding-bottom: 10px;
     }
@@ -142,16 +163,18 @@ main{
     .caracteristicas ul li{
         list-style-type: none;
         font-size: 120%;
+        color: #002328;
     }
     .caracteristicas ul li::before{
         content: "✔";
-        color: #1D4ED8;
+        color: #007b8e;
         margin-right: 10px;
     }
 
     .dato-importante{
-        background-color: rgba(255, 255, 255, 0.5);
-        border-color:rgba(255, 255, 255, 0.644); 
+        background-color: white;
+        border: 1px solid rgba(0, 123, 142, 0.22);
+        border-left: 4px solid #007b8e;
         padding: 20px 15px 20px 40px;
         min-height:80px;
         border-radius: 10px;
@@ -162,19 +185,20 @@ main{
     }
 
     .dato-importante h3{
-        color: #1D4ED8;
+        color: #007b8e;
         font-size: 150%;
         padding-bottom: 10px;
     }
     
     .distribucion{
-        background-color: #f5f5f5;
+        background-color: white;
+        border: 1px solid rgba(0, 123, 142, 0.15);
         justify-content: center;
         width: 100%;
         border-radius: 20px;
         width: 90%;
         justify-self: center;
-        
+        box-shadow: 0px 5px 15px rgba(0, 35, 40, 0.06);
     }
 
    .text-distribucion{
@@ -186,10 +210,8 @@ main{
         padding: 20px;
    }
 
-    
-
     .text-distribucion h3{
-        color: #1D4ED8;
+        color: #004f5b;
         font-size: 100%;
         align-items: flex-start;
     }
@@ -202,16 +224,16 @@ main{
         gap: 20px;
     }
     .ciclo{
-        background-color:#cce7f7 ;
-
+        background-color: #f4fafb;
     }
-
 
     .salada{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #add8e6e1;
+        background-color: rgba(0, 79, 91, 0.14);
+        border: 1px solid rgba(0, 79, 91, 0.25);
+        color: #002328;
         padding: 30px;
         border-radius: 10px;
         max-width: 100%;
@@ -222,7 +244,9 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #add8e68a;
+        background-color: rgba(0, 123, 142, 0.12);
+        border: 1px solid rgba(0, 123, 142, 0.25);
+        color: #002328;
         padding: 30px;
         border-radius: 10px;
         max-width: 100%;
@@ -232,7 +256,9 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #add8e68a;
+        background-color: rgba(0, 167, 193, 0.14);
+        border: 1px solid rgba(0, 167, 193, 0.25);
+        color: #002328;
         padding: 30px;
         border-radius: 10px;
         max-width: 140px;
@@ -303,3 +329,4 @@ main{
             width: 70%;
         }
     }
+    

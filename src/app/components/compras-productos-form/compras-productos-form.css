@@ -1,7 +1,18 @@
+/* Paleta de colores corporativa Aqua Nova:
+   #000000
+   #002328
+   #004f5b
+   #007b8e
+   #00a7c1
+   #00d3f4
+   #28e2ff
+*/
+
 .form{
     display: flex;
     flex-direction: column;
-    background-color: #d5faff;
+    background-color: #f4fafb;
+    color: #002328;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -12,7 +23,8 @@
 .inputs{
     display: flex;
     flex-direction: column;
-    background-color: #d5faff;
+    background-color: #f4fafb;
+    color: #002328;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -28,23 +40,30 @@ div{
 }
 input{
     border-radius: 20px;
+    border: 1px solid rgba(0, 123, 142, 0.35);
     width: 100%;
     height: 30px;
     background-color: white;
+    color: #002328;
     padding-left: 20px;
     overflow: hidden;
 }
+input:focus{
+    outline: none;
+    border-color: #00a7c1;
+    box-shadow: 0 0 0 3px rgba(0, 167, 193, 0.18);
+}
 button{
     display: flex;
-    border-color: #1d4ed8;
+    border-color: #007b8e;
     border-radius: 13px;
-    background-color: #1d4ed8;
-    color:white;
+    background-color: #007b8e;
+    color: white;
     width: 200px;
     height: 50px;
     font-size: 150%;
-    transition:1s ease;
-    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    transition: 1s ease;
+    box-shadow: 0 7px 15px rgba(0, 35, 40, 0.12);
     padding: 30px 20px; 
     align-self: center;
     align-items: center;
@@ -52,7 +71,8 @@ button{
 }
 
 button:hover{
-    background-color:#3c66da;
+    background-color: #00a7c1;
+    border-color: #00a7c1;
     transform: scale(1.2);
-    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 7px 15px rgba(0, 79, 91, 0.18);
 }

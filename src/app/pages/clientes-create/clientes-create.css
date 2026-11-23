@@ -1,20 +1,33 @@
-﻿.container {
+﻿/* Paleta de colores corporativa Aqua Nova:
+   #000000
+   #002328
+   #004f5b
+   #007b8e
+   #00a7c1
+   #00d3f4
+   #28e2ff
+   #dc2626
+   #059669
+   #f4fafb
+*/
+
+.container {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 123, 142, 0.22);
   border-radius: 8px;
-  background-color: #f9fafb;
+  background-color: #f4fafb;
 }
 
 h2 {
-  color: #333;
+  color: #002328;
   margin-bottom: 20px;
   font-size: 24px;
 }
 
 h3 {
-  color: #333;
+  color: #002328;
   margin-bottom: 15px;
   font-size: 18px;
 }
@@ -40,34 +53,37 @@ label {
   display: block;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #374151;
+  color: #004f5b;
 }
 
 input, select {
   width: 100%;
   padding: 8px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 123, 142, 0.35);
   border-radius: 4px;
   font-size: 14px;
+  color: #002328;
+  background-color: #ffffff;
   box-sizing: border-box;
 }
 
 input:focus, select:focus {
   outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: #00a7c1;
+  box-shadow: 0 0 0 3px rgba(0, 167, 193, 0.18);
 }
 
 .btn-primary {
   width: 100%;
   padding: 10px 16px;
-  background: #2563eb;
+  background: #007b8e;
   color: white;
   border: none;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
   margin-top: 10px;
+  transition: background-color 0.2s ease;
 }
 
 .search-section .btn-primary {
@@ -77,7 +93,7 @@ input:focus, select:focus {
 }
 
 .btn-primary:hover {
-  background: #1d4ed8;
+  background: #00a7c1;
 }
 
 .registro-info {
@@ -85,12 +101,12 @@ input:focus, select:focus {
   padding: 20px;
   border-radius: 8px;
   margin-top: 20px;
-  border-left: 4px solid #2563eb;
+  border-left: 4px solid #007b8e;
 }
 
 .registro-info p {
   margin: 10px 0;
-  color: #333;
+  color: #002328;
 }
 
 .btn-delete {
@@ -120,4 +136,3 @@ input:focus, select:focus {
   border-radius: 4px;
   border-left: 4px solid #059669;
 }
-
