@@ -24,3 +24,7 @@ proyecto_aquanova/
 ├── database/                  # Scripts SQL de estructura y datos iniciales (PostgreSQL)
 └── docker-compose.yml         # Orquestación de contenedores (Frontend, Backend/Agente, DB)
 
+## Documentación de referencia
+- https://docs.langchain.com/oss/javascript/langgraph/quickstart
+- https://www.xjavascript.com/blog/langgraph-typescript/
+- https://dev.to/fabrikapp/how-to-implement-a-langchain-langgraph-in-typescript-in-5-minutes-21mh
