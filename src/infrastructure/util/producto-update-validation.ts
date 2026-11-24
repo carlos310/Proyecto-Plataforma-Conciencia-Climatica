@@ -8,6 +8,9 @@ export type ReturnUpdateProductoData = Partial<{
   stock: string;
   category: string;
   providerId: number;
+  reference: number;
+  measure: string;
+  material: string;
 }>;
 
 type ValidationUpdateProductoData = {
@@ -70,6 +73,20 @@ function validateUpdateProductoData(data: any): ValidationUpdateProductoData {
     providerId: Joi.number().integer().min(1).optional().messages({
       'number.base': 'El id de proveedor debe ser un número.',
       'number.min': 'El id de proveedor debe ser mayor a 0.',
+    }),
+    reference: Joi.number().integer().min(1).optional().messages({
+      'number.base': 'La referencia debe ser un número.',
+      'number.min': 'La referencia debe ser mayor a 0.',
+    }),
+    measure: Joi.string().trim().min(1).max(45).optional().messages({
+      'string.base': 'La medida debe ser un texto.',
+      'string.empty': 'La medida no puede estar vacía.',
+      'string.max': 'La medida no puede superar los 45 caracteres.',
+    }),
+    material: Joi.string().trim().min(1).max(45).optional().messages({
+      'string.base': 'El material debe ser un texto.',
+      'string.empty': 'El material no puede estar vacío.',
+      'string.max': 'El material no puede superar los 45 caracteres.',
     }),
   }).unknown(false);
 

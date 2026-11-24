@@ -9,6 +9,9 @@ export type ReturnProductoData = {
   stock: string;
   category: string;
   providerId: number;
+  reference: number;
+  measure: string;
+  material: string;
 };
 
 type ValidationProductoData = {
@@ -78,6 +81,23 @@ function validateProductoData(data: any): ValidationProductoData {
       'number.base': 'El id de proveedor debe ser un número.',
       'number.min': 'El id de proveedor debe ser mayor a 0.',
       'any.required': 'El id de proveedor es obligatorio.',
+    }),
+    reference: Joi.number().integer().min(1).required().messages({
+      'number.base': 'La referencia debe ser un número.',
+      'number.min': 'La referencia debe ser mayor a 0.',
+      'any.required': 'La referencia es obligatoria.',
+    }),
+    measure: Joi.string().trim().min(1).max(45).required().messages({
+      'string.base': 'La medida debe ser un texto.',
+      'string.empty': 'La medida no puede estar vacía.',
+      'string.max': 'La medida no puede superar los 45 caracteres.',
+      'any.required': 'La medida es obligatoria.',
+    }),
+    material: Joi.string().trim().min(1).max(45).required().messages({
+      'string.base': 'El material debe ser un texto.',
+      'string.empty': 'El material no puede estar vacío.',
+      'string.max': 'El material no puede superar los 45 caracteres.',
+      'any.required': 'El material es obligatorio.',
     }),
   }).unknown(false);
 
