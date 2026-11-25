@@ -1,17 +1,17 @@
-import { ticketAgente } from "../domain/agente";
-import { ticketPort, modeloPort } from '../domain/agentePort';
-import { graph, type Grafo } from "./Agent/grafo";
+import { ticketAgente } from "../domain/agente.js";
+import { ticketPort, modeloPort } from '../domain/agentePort.js';
+import { graph, type Grafo } from "./Agent/grafo.js";
 
 export class AgenteApplication{
 
     // puerto: auditoría de ticket realizada por el usuario
     private port: ticketPort;
-    //Leer la estructura dle grafo
-    private grafo: Grafo;
+    //Leer la estructura del grafo
+    private grafo?: Grafo;
 
-    constructor(port: ticketPort, modelo:modeloPort){
+    constructor(port: ticketPort, modelo?:modeloPort){
         this.port=port;
-        this.grafo = graph({modelo});
+        if (modelo) this.grafo = graph({modelo});
     }
 
     async createTicket(ticket: Omit<ticketAgente, "id">): Promise<number>{

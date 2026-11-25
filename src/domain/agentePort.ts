@@ -1,4 +1,4 @@
-import { ticketAgente } from "./agente";
+import { ticketAgente } from "./agente.js";
 
 export interface ticketPort {
   createTicket(ticket: Omit<ticketAgente, "id">): Promise<number>;

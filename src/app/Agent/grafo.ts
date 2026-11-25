@@ -1,4 +1,4 @@
-import { modeloPort } from "../../domain/agentePort";
+import { modeloPort } from "../../domain/agentePort.js";
 
 export function graph(deps: { modelo: modeloPort }) {
   return {
