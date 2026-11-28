@@ -1,6 +1,5 @@
 export interface Producto{
     id:number;
-    reference: number;
     category:string;
     name:string;
     description:string;

@@ -22,7 +22,6 @@ export class ProductoAdapter implements ProductoPort{
             stock:Producto.prod_stock,
             category:Producto.prod_categoria,
             providerId:Producto.prov_id,
-            reference:Producto.prod_referencia,
             measure:Producto.prod_medida,
             material:Producto.prod_material,
         }
@@ -30,7 +29,6 @@ export class ProductoAdapter implements ProductoPort{
     //se pasan los datos del dominio a modelo entidad
     private toEntity(Producto:Omit<ProductoDomain, "id">):ProductoEntity{
         const productoEntity= new ProductoEntity();
-        productoEntity.prod_referencia=Producto.reference;
         productoEntity.prod_nombre= Producto.name;
         productoEntity.prod_descripcion= Producto.description;
         productoEntity.prod_precio_venta= Producto.sellValue;
@@ -67,7 +65,6 @@ export class ProductoAdapter implements ProductoPort{
                 prod_stock: Producto.stock ?? existingProducto.prod_stock,
                 prod_categoria: Producto.category ?? existingProducto.prod_categoria,
                 prov_id:Producto.providerId?? existingProducto.prov_id,
-                prod_referencia:Producto.reference ?? existingProducto.prod_referencia,
                 prod_medida:Producto.measure ?? existingProducto.prod_medida,
                 prod_material:Producto.material ?? existingProducto.prod_material,
             });

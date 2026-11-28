@@ -20,7 +20,7 @@ function validateUserEmail(data:any){
         
         }).unknown(false); //no se permiten campos extra u otros fields no conocidos
         //el or se agregó para que no se limite a exigir todo sino que permita que no sean todos los valores los que se modifiquen
-        const{error, value}=userEmailSchema.validate({abortEarly:false});//abortEarly define cuantos errores soporta mientras va validando si fuera true pararía en el primer error, en este caso como es false solo sigue después de obtener el error
+        const{error, value}=userEmailSchema.validate(data,{abortEarly:false});//abortEarly define cuantos errores soporta mientras va validando si fuera true pararía en el primer error, en este caso como es false solo sigue después de obtener el error
         return{error, value};
     
 }

@@ -13,7 +13,7 @@ export class ProductoController{
         try {
             //validar datos de entrada
             //se hce un reestructuración de los datos
-            const{id,name,description,sellValue,buyValue,stock,category,providerId,reference,measure,material}=loadProductoData(req.body);
+            const{id,name,description,sellValue,buyValue,stock,category,providerId,measure,material}=loadProductoData(req.body);
             //crear Producto
             const producto:Producto={
                 id,
@@ -24,7 +24,6 @@ export class ProductoController{
                 stock,
                 category,
                 providerId,
-                reference,
                 measure,
                 material,
 

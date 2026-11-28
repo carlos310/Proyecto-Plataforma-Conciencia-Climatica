@@ -12,6 +12,7 @@ import { Empleado } from "../entities/empleado.js";
 import { Venta } from "../entities/venta.js";
 import { Factura } from "../entities/factura.js";
 import { ticketAgente } from "../entities/agente.js";
+import { DropProductoReferencia1795881660000 } from "../migrations/1795881660000-DropProductoReferencia.js";
 import envs from "./environment-vars.js";
 dotenv.config();
 export const AppDataSource= new DataSource({
@@ -24,7 +25,8 @@ export const AppDataSource= new DataSource({
     schema:"aqua_nova",
     synchronize: false, //no se usa en prod 
     logging:true,
-    entities:[User, Producto, Ingresos,Gastos,Costos,Compras, Proveedor, Cliente, Empleado, Venta, Factura, ticketAgente]
+    entities:[User, Producto, Ingresos,Gastos,Costos,Compras, Proveedor, Cliente, Empleado, Venta, Factura, ticketAgente],
+    migrations:[DropProductoReferencia1795881660000]
 });
 
 //conetar a la DB
