@@ -33,6 +33,7 @@ userRouter.get("/me", authenticateToken, async (req: any, res: Response) => {
   }
 });
 //definicion de rutas
+//Registro de usuario nuevo
 userRouter.post("/users", async(req: Request, res: Response)=>{
     try {
         await userController.createUser(req,res);

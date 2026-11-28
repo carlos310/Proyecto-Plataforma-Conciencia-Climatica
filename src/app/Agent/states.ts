@@ -1,0 +1,3 @@
+//Estados: define lo que recuerda el agente
+//  Historial de mensajes, recordar funciones como enviar a un asesor, nombre dle usuario, etc...
+

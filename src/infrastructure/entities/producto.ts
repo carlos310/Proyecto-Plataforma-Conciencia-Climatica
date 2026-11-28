@@ -6,7 +6,7 @@ export class Producto{
 
     @Column({type:"character varying", length:45})
     prod_nombre!:string; 
-    @Column({type:"character varying", length:45})
+    @Column({type:"text"})
     prod_descripcion!:string; 
     @Column({type:"numeric"})
     prod_precio_venta!:number;
@@ -16,7 +16,11 @@ export class Producto{
     prod_stock!:string;
     @Column({type:"character varying", length:45})
     prod_categoria!:string;
+    @Column({name:"prod_medidas", type:"text"})
+    prod_medida!:string;
+    @Column({type:"character varying", length:45})
+    prod_material!:string;
     @Column({type:"int"})
     prov_id!:number;
-     
+    
 }

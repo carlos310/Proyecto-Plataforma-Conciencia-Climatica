@@ -22,6 +22,8 @@ export class ProductoAdapter implements ProductoPort{
             stock:Producto.prod_stock,
             category:Producto.prod_categoria,
             providerId:Producto.prov_id,
+            measure:Producto.prod_medida,
+            material:Producto.prod_material,
         }
     }
     //se pasan los datos del dominio a modelo entidad
@@ -34,6 +36,8 @@ export class ProductoAdapter implements ProductoPort{
         productoEntity.prod_stock= Producto.stock;
         productoEntity.prod_categoria= Producto.category;
         productoEntity.prov_id=Producto.providerId;
+        productoEntity.prod_medida=Producto.measure;
+        productoEntity.prod_material=Producto.material;
         return productoEntity;
     }
 
@@ -61,6 +65,8 @@ export class ProductoAdapter implements ProductoPort{
                 prod_stock: Producto.stock ?? existingProducto.prod_stock,
                 prod_categoria: Producto.category ?? existingProducto.prod_categoria,
                 prov_id:Producto.providerId?? existingProducto.prov_id,
+                prod_medida:Producto.measure ?? existingProducto.prod_medida,
+                prod_material:Producto.material ?? existingProducto.prod_material,
             });
             await this.ProductoRepository.save(existingProducto);
             return true;

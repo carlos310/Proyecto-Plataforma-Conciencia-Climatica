@@ -1,5 +1,11 @@
 import jwt from "jsonwebtoken";
-const JWT_SECRET="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"; //DEBEN SER 32 CARACTERES O BITS, ES UNA CONTRASEÑA QUE SE VA A USAR PARA DAR ACCESO
+import "dotenv/config";
+
+const JWT_SECRET: string = process.env["JWT_SECRET"] ?? "";
+
+if(!JWT_SECRET){
+    throw new Error("JWT no configurado");
+}
 
 export class AuthAppplication{
     static generateToken(payload:object):string{

@@ -15,6 +15,7 @@ import clienteRouter from "./infrastructure/routes/ClienteRoutes.js";
 import empleadoRouter from "./infrastructure/routes/EmpleadoRoutes.js";
 import ventaRouter from "./infrastructure/routes/VentaRoutes.js";
 import facturaRouter from "./infrastructure/routes/FacturaRoutes.js";
+import agenteRouter from "./infrastructure/routes/AgenteRoutes.js";
 import cors from "cors";
 
 dotenv.config();
@@ -48,6 +49,7 @@ app.use("/api/clientes", clienteRouter);
 app.use("/api/empleados", empleadoRouter);
 app.use("/api/ventas", ventaRouter);
 app.use("/api/facturas", facturaRouter);
+app.use("/api/tickets-agente", agenteRouter);
 
 // Start server
 connectDB().then(() => {
